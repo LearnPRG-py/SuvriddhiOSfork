@@ -4,6 +4,24 @@
         "title": "Algebra",
         "items": [
             {
+                "id": "coordgeocontent",
+                "type": "lesson",
+                "title": "Learn Coordinate Geometry",
+                "contentFile": "topics_math/cgo/index.html"
+            },
+            {
+                "id": "directinversevariation",
+                "type": "lesson",
+                "title": "Learn Direct and Inverse Variation",
+                "contentFile": "topics_math/ivdv/index.html"
+            },
+            {
+                "id": "learnsequences",
+                "type": "lesson",
+                "title": "Learn Sequences",
+                "contentFile": "topics_math/sequences/index.html"
+            },
+            {
                 "id": "3",
                 "type": "lesson",
                 "title": "Intersection of Lines",
@@ -40,6 +58,12 @@
         "title": "Probability",
         "items": [
             {
+                "id": "learnprobability",
+                "type": "lesson",
+                "title": "Probability Content",
+                "contentFile": "topics_math/probability/index.html"
+            },
+            {
                 "id": "8",
                 "type": "lesson",
                 "title": "Probability",
@@ -57,6 +81,18 @@
         "id": "TrigonometryAndGeometry",
         "title": "Trigonometry and Geometry",
         "items": [
+            {
+                "id": "learntrig",
+                "type": "lesson",
+                "title": "Learn Trignometry",
+                "contentFile": "topics_math/trig/index.html"
+            },
+            {
+                "id": "learngeo",
+                "type": "lesson",
+                "title": "Learn Geometry",
+                "contentFile": "topics_math/geo/index.html"
+            },
             {
                 "id": "10",
                 "type": "lesson",
@@ -106,13 +142,13 @@
                 "contentFile": "topics_math/index.html"
             },
             {
-                "id": "23",
+                "id": "25",
                 "type": "lesson",
                 "title": "Congruency Puzzle",
                 "contentFile": "topics_math/index.html"
             },
             {
-                "id": "24",
+                "id": "26",
                 "type": "lesson",
                 "title": "Similarity Puzzle",
                 "contentFile": "topics_math/index.html"
@@ -123,6 +159,12 @@
         "id": "ExponentsAndLogarithms",
         "title": "Exponents and Logarithms",
         "items": [
+            {
+                "id": "learnlogs",
+                "type": "lesson",
+                "title": "Learn Logs",
+                "contentFile": "topics_math/logs/index.html"
+            },
             {
                 "id": "18",
                 "type": "lesson",
@@ -160,13 +202,13 @@
                 "contentFile": "topics_math/index.html"
             },
             {
-                "id": "25",
+                "id": "23",
                 "type": "lesson",
                 "title": "Direct Proportionality",
                 "contentFile": "topics_math/index.html"
             },
             {
-                "id": "26",
+                "id": "24",
                 "type": "lesson",
                 "title": "Inverse Proportionality",
                 "contentFile": "topics_math/index.html"
