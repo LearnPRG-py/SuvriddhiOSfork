@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trigonometry - Study Guide</title>
+        <link rel="stylesheet" href="/data/topics_math/commonstyles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Trigonometry</h1>
+
+            <div class="video-placeholder">
+                <video controls width="100%" height="100%">
+                    <source
+                        src="/data/topics_math/Vids/trianglevid.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            </div>
+
+            <h2>Basic Definitions (Right-Angled Triangle)</h2>
+            <p>
+                For a right-angled triangle with angle θ, the three sides are
+                the <strong>hypotenuse</strong> (opposite the right angle), the
+                <strong>opposite</strong> side (across from θ), and the
+                <strong>adjacent</strong> side (next to θ).
+            </p>
+            <div class="equation">
+                <p>sin(θ) = Opposite / Hypotenuse</p>
+                <p>cos(θ) = Adjacent / Hypotenuse</p>
+                <p>tan(θ) = Opposite / Adjacent = sin(θ)/cos(θ)</p>
+                <p style="margin-top: 10px; font-size: 0.9em">
+                    Memory aid: <strong>SOH CAH TOA</strong>
+                </p>
+            </div>
+
+            <h2>Key Angles</h2>
+            <table>
+                <tr>
+                    <th>Angle</th>
+                    <th>sin</th>
+                    <th>cos</th>
+                    <th>tan</th>
+                </tr>
+                <tr>
+                    <td>0°</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>30°</td>
+                    <td>1/2</td>
+                    <td>√3/2</td>
+                    <td>1/√3</td>
+                </tr>
+                <tr>
+                    <td>45°</td>
+                    <td>1/√2</td>
+                    <td>1/√2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>60°</td>
+                    <td>√3/2</td>
+                    <td>1/2</td>
+                    <td>√3</td>
+                </tr>
+                <tr>
+                    <td>90°</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>undefined</td>
+                </tr>
+            </table>
+
+            <h2>The Unit Circle</h2>
+            <p>
+                The unit circle has radius 1 centered at the origin. For any
+                angle θ, the point on the unit circle is
+                <strong>(cos θ, sin θ)</strong>. This extends trig functions
+                beyond 0°–90° to all angles.
+            </p>
+            <div class="definition">
+                <p><strong>Signs by quadrant (CAST rule):</strong></p>
+                <ul>
+                    <li>Quadrant I (0°–90°): All positive</li>
+                    <li>Quadrant II (90°–180°): Sin positive only</li>
+                    <li>Quadrant III (180°–270°): Tan positive only</li>
+                    <li>Quadrant IV (270°–360°): Cos positive only</li>
+                </ul>
+            </div>
+
+            <h2>Trigonometric Identities</h2>
+            <div class="equation">
+                <p><strong>Pythagorean Identity:</strong></p>
+                <p>sin²(θ) + cos²(θ) = 1</p>
+                <p style="margin-top: 15px"><strong>Derived forms:</strong></p>
+                <p>1 + tan²(θ) = sec²(θ)</p>
+                <p>1 + cot²(θ) = cosec²(θ)</p>
+                <p style="margin-top: 15px">
+                    <strong>Double Angle Formulas:</strong>
+                </p>
+                <p>sin(2θ) = 2 sin(θ) cos(θ)</p>
+                <p>cos(2θ) = cos²(θ) - sin²(θ)</p>
+            </div>
+
+            <h2>Triangle Congruence</h2>
+            <p>
+                Two triangles are <strong>congruent</strong> (identical in shape
+                and size) if any of the following conditions hold:
+            </p>
+            <div class="law-box">
+                <h3>Congruence Conditions</h3>
+                <ul>
+                    <li><strong>SSS:</strong> All three sides are equal</li>
+                    <li>
+                        <strong>SAS:</strong> Two sides and the included angle
+                        are equal
+                    </li>
+                    <li>
+                        <strong>ASA:</strong> Two angles and the included side
+                        are equal
+                    </li>
+                    <li>
+                        <strong>RHS:</strong> Right angle, hypotenuse, and one
+                        side are equal
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Triangle Similarity</h2>
+            <p>
+                Two triangles are <strong>similar</strong> (same shape,
+                different size) if corresponding angles are equal. Their sides
+                are in the same ratio.
+            </p>
+            <div class="law-box">
+                <h3>Similarity Conditions</h3>
+                <ul>
+                    <li>
+                        <strong>AA:</strong> Two pairs of equal angles (the
+                        third must also match)
+                    </li>
+                    <li>
+                        <strong>SAS Similarity:</strong> Two sides in the same
+                        ratio with equal included angle
+                    </li>
+                    <li>
+                        <strong>SSS Similarity:</strong> All three sides in the
+                        same ratio
+                    </li>
+                </ul>
+            </div>
+            <div class="note">
+                <p>
+                    <strong>Key consequence of similarity:</strong> If two
+                    triangles are similar with scale factor k, their areas are
+                    in the ratio k².
+                </p>
+            </div>
+
+            <h2>Sine and Cosine Rules</h2>
+            <div class="equation">
+                <p><strong>Sine Rule:</strong></p>
+                <p>a/sin(A) = b/sin(B) = c/sin(C)</p>
+                <p style="margin-top: 15px"><strong>Cosine Rule:</strong></p>
+                <p>a² = b² + c² - 2bc cos(A)</p>
+                <p style="margin-top: 10px; font-size: 0.9em">
+                    Use sine rule when you have a side-angle pair. Use cosine
+                    rule when you have three sides or two sides + included
+                    angle.
+                </p>
+            </div>
+
+            <div class="example">
+                <h3>Example: Sine Rule</h3>
+                <p>
+                    In triangle ABC, angle A = 40°, angle B = 60°, side a = 10.
+                    Find side b.
+                </p>
+                <p>b/sin(60°) = 10/sin(40°)</p>
+                <p>
+                    b = 10 × sin(60°)/sin(40°) ≈ 10 × 0.866/0.643 ≈
+                    <span class="highlight">13.5</span>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

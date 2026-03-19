@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Probability & Combinatorics - Study Guide</title>
+        <link rel="stylesheet" href="/data/topics_math/commonstyles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Probability & Combinatorics</h1>
+
+            <div class="video-placeholder">
+                <video controls width="100%" height="100%">
+                    <source
+                        src="/data/topics_math/Vids/Probvid.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            </div>
+
+            <h2>Basic Probability</h2>
+            <p>
+                Probability measures how likely an event is to occur, expressed
+                as a number between 0 (impossible) and 1 (certain).
+            </p>
+            <div class="equation">
+                <p><strong>Basic Probability:</strong></p>
+                <p>
+                    P(event) = Number of favourable outcomes / Total number of
+                    outcomes
+                </p>
+            </div>
+            <div class="definition">
+                <p><strong>Key Terms:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Sample Space (S):</strong> the set of all
+                        possible outcomes
+                    </li>
+                    <li>
+                        <strong>Event:</strong> a subset of the sample space
+                    </li>
+                    <li>
+                        <strong>Complement P(A'):</strong> probability that A
+                        does NOT occur = 1 - P(A)
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Probability Trees</h2>
+            <p>
+                A probability tree diagrams out all possible outcomes across
+                multiple events. Each branch represents one outcome, and the
+                probability of each branch is written on it. To find the
+                probability of a sequence of events,
+                <strong>multiply along the branches</strong>.
+            </p>
+            <div class="example">
+                <h3>Example: Two Coin Flips</h3>
+                <div class="tree">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H (0.5) → HH: 0.5 × 0.5
+                    = 0.25<br />
+                    &nbsp;&nbsp;&nbsp;H (0.5)<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T (0.5) → HT: 0.5 × 0.5
+                    = 0.25<br />
+                    Start<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H (0.5) → TH: 0.5 × 0.5
+                    = 0.25<br />
+                    &nbsp;&nbsp;&nbsp;T (0.5)<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T (0.5) → TT: 0.5 × 0.5
+                    = 0.25
+                </div>
+                <p>
+                    All four outcomes have equal probability of 0.25. They sum
+                    to 1 ✓
+                </p>
+            </div>
+
+            <h2>Conditional Probability</h2>
+            <p>
+                Conditional probability is the probability of event A occurring
+                <strong>given that</strong> event B has already occurred.
+            </p>
+            <div class="equation">
+                <p><strong>Conditional Probability:</strong></p>
+                <p>P(A | B) = P(A ∩ B) / P(B)</p>
+                <p style="margin-top: 10px; font-size: 0.9em">
+                    Read as: "Probability of A given B"
+                </p>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>
+                    A bag has 3 red and 2 blue balls. You draw one ball (red)
+                    and don't replace it. What is the probability the second
+                    ball is also red?
+                </p>
+                <p>After drawing red: 2 red remain out of 4 total balls.</p>
+                <p>
+                    P(2nd red | 1st red) = 2/4 =
+                    <span class="highlight">0.5</span>
+                </p>
+            </div>
+            <div class="note">
+                <p>
+                    <strong>Independent events:</strong> If A and B are
+                    independent, P(A|B) = P(A). Knowing B happened tells you
+                    nothing about A. Example: two separate coin flips.
+                </p>
+            </div>
+
+            <h2>Permutations</h2>
+            <p>
+                A permutation is an arrangement where
+                <strong>order matters</strong>. The number of ways to arrange r
+                items chosen from n distinct items is written as nPr or P(n,r).
+            </p>
+            <div class="equation">
+                <p><strong>Permutation Formula:</strong></p>
+                <p>nPr = n! / (n - r)!</p>
+                <p style="margin-top: 10px; font-size: 0.9em">
+                    Where n! = n × (n-1) × (n-2) × ... × 1
+                </p>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>
+                    In how many ways can 3 students be chosen as President,
+                    Vice-President, and Secretary from a group of 10?
+                </p>
+                <p>
+                    10P3 = 10! / 7! = 10 × 9 × 8 =
+                    <span class="highlight">720</span>
+                </p>
+                <p>Order matters because the roles are different.</p>
+            </div>
+
+            <h2>Combinations</h2>
+            <p>
+                A combination is a selection where
+                <strong>order does not matter</strong>. The number of ways to
+                choose r items from n is written as nCr or C(n,r) or
+                <sup>n</sup>C<sub>r</sub>.
+            </p>
+            <div class="equation">
+                <p><strong>Combination Formula:</strong></p>
+                <p>nCr = n! / (r! × (n - r)!)</p>
+                <p style="margin-top: 10px; font-size: 0.9em">
+                    nCr = nPr / r! &nbsp; (we divide out the r! arrangements
+                    that don't matter)
+                </p>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>
+                    How many ways can a committee of 3 be chosen from 10
+                    students?
+                </p>
+                <p>
+                    10C3 = 10! / (3! × 7!) = (10 × 9 × 8) / (3 × 2 × 1) = 720/6
+                    = <span class="highlight">120</span>
+                </p>
+            </div>
+
+            <div class="law-box">
+                <h3>Permutation vs Combination: The Key Question</h3>
+                <ul>
+                    <li>
+                        Does the <strong>order</strong> of selection matter? →
+                        Use <strong>Permutation</strong>
+                    </li>
+                    <li>
+                        Does only the <strong>group</strong> matter, not the
+                        order? → Use <strong>Combination</strong>
+                    </li>
+                    <li>
+                        Passwords, race positions, ranked lists → Permutation
+                    </li>
+                    <li>Teams, committees, lottery draws → Combination</li>
+                    <li>
+                        Always: nCr ≤ nPr (combinations are fewer because order
+                        is ignored)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
