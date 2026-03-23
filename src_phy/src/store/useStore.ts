@@ -7,18 +7,16 @@ import { getTopicProgress } from "../utils/getTopicProgress";
 interface Store {
     subject: SubjectType;
     setSubject: (subject: SubjectType) => void;
-
     lastActivity: ActiveItem | null;
     setLastActivity: (item: ActiveItem) => void;
-
     completed: Record<string, boolean>;
     markItemCompleted: (itemId: string) => void;
     getTopicProgress: (topics: Topic[], topicId: string) => number;
     isItemCompleted: (itemId: string) => boolean;
-
     drafts: Record<string, string>;
     saveDraftForExercise: (itemId: string, code: string) => void;
     getDraftForExercise: (itemId: string) => string | undefined;
+    _lastActivityMap: Partial<Record<SubjectType, ActiveItem | null>>;
 }
 
 export const useStore = create<Store>()(
@@ -26,10 +24,17 @@ export const useStore = create<Store>()(
         (set, get) => ({
             subject: "Physics",
             setSubject: (subject: SubjectType) => set({ subject }),
-
-            lastActivity: null,
-            setLastActivity: (la) => set({ lastActivity: la }),
-
+            _lastActivityMap: {},
+            get lastActivity() {
+                return get()._lastActivityMap[get().subject] ?? null;
+            },
+            setLastActivity: (item: ActiveItem) =>
+                set((state) => ({
+                    _lastActivityMap: {
+                        ...state._lastActivityMap,
+                        [state.subject]: item,
+                    },
+                })),
             completed: {},
             markItemCompleted: (itemId) =>
                 set((state) => ({
@@ -40,7 +45,6 @@ export const useStore = create<Store>()(
                 return getTopicProgress(topicId, topics, completed);
             },
             isItemCompleted: (itemId) => !!get().completed[itemId],
-
             drafts: {},
             saveDraftForExercise: (itemId, code) =>
                 set((state) => ({
@@ -52,7 +56,7 @@ export const useStore = create<Store>()(
             name: "subject",
             partialize: (state) => ({
                 subject: state.subject,
-                lastActivity: state.lastActivity,
+                _lastActivityMap: state._lastActivityMap,
                 completed: state.completed,
                 drafts: state.drafts,
             }),
