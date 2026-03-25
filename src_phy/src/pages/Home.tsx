@@ -12,7 +12,7 @@ export default function Home() {
         lastActivity,
         setLastActivity,
         markItemCompleted,
-        isItemCompleted,
+        isItemCompleted
     } = useStore();
 
     const [hydrated, setHydrated] = useState(false);
