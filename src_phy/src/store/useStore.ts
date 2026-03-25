@@ -7,12 +7,15 @@ import { getTopicProgress } from "../utils/getTopicProgress";
 interface Store {
     subject: SubjectType;
     setSubject: (subject: SubjectType) => void;
+
     lastActivity: ActiveItem | null;
     setLastActivity: (item: ActiveItem) => void;
     completed: Record<string, boolean>;
+
     markItemCompleted: (itemId: string) => void;
     getTopicProgress: (topics: Topic[], topicId: string) => number;
     isItemCompleted: (itemId: string) => boolean;
+
     drafts: Record<string, string>;
     saveDraftForExercise: (itemId: string, code: string) => void;
     getDraftForExercise: (itemId: string) => string | undefined;
