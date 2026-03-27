@@ -12,7 +12,7 @@ export default function Home() {
         lastActivity,
         setLastActivity,
         markItemCompleted,
-        isItemCompleted
+        isItemCompleted,
     } = useStore();
 
     const [hydrated, setHydrated] = useState(false);
@@ -34,15 +34,6 @@ export default function Home() {
         }
         setHydrated(true);
     }, [subject]);
-
-    useEffect(() => {
-        if (lastActivity) {
-            localStorage.setItem(
-                `lastActivity_${subject}`,
-                JSON.stringify(lastActivity),
-            );
-        }
-    }, [lastActivity, subject]);
 
     if (!hydrated) {
         return (

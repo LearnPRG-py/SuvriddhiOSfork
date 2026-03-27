@@ -26,13 +26,16 @@ export const useStore = create<Store>()(
     persist(
         (set, get) => ({
             subject: "Physics",
-            setSubject: (subject: SubjectType) => set({ subject }),
             _lastActivityMap: {},
-            get lastActivity() {
-                return get()._lastActivityMap[get().subject] ?? null;
-            },
+            lastActivity: null,
+            setSubject: (subject: SubjectType) =>
+                set((state) => ({
+                    subject,
+                    lastActivity: state._lastActivityMap[subject] ?? null,
+                })),
             setLastActivity: (item: ActiveItem) =>
                 set((state) => ({
+                    lastActivity: item,
                     _lastActivityMap: {
                         ...state._lastActivityMap,
                         [state.subject]: item,
@@ -63,6 +66,13 @@ export const useStore = create<Store>()(
                 completed: state.completed,
                 drafts: state.drafts,
             }),
+            onRehydrateStorage: () => (state) => {
+                if (state) {
+                    state.lastActivity =
+                        state._lastActivityMap[state.subject] ?? null;
+                    console.log(state.lastActivity);
+                }
+            },
         },
     ),
 );
