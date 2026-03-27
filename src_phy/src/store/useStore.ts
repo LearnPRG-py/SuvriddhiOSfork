@@ -10,8 +10,8 @@ interface Store {
 
     lastActivity: ActiveItem | null;
     setLastActivity: (item: ActiveItem) => void;
-
     completed: Record<string, boolean>;
+
     markItemCompleted: (itemId: string) => void;
     getTopicProgress: (topics: Topic[], topicId: string) => number;
     isItemCompleted: (itemId: string) => boolean;
@@ -19,17 +19,28 @@ interface Store {
     drafts: Record<string, string>;
     saveDraftForExercise: (itemId: string, code: string) => void;
     getDraftForExercise: (itemId: string) => string | undefined;
+    _lastActivityMap: Partial<Record<SubjectType, ActiveItem | null>>;
 }
 
 export const useStore = create<Store>()(
     persist(
         (set, get) => ({
             subject: "Physics",
-            setSubject: (subject: SubjectType) => set({ subject }),
-
+            _lastActivityMap: {},
             lastActivity: null,
-            setLastActivity: (la) => set({ lastActivity: la }),
-
+            setSubject: (subject: SubjectType) =>
+                set((state) => ({
+                    subject,
+                    lastActivity: state._lastActivityMap[subject] ?? null,
+                })),
+            setLastActivity: (item: ActiveItem) =>
+                set((state) => ({
+                    lastActivity: item,
+                    _lastActivityMap: {
+                        ...state._lastActivityMap,
+                        [state.subject]: item,
+                    },
+                })),
             completed: {},
             markItemCompleted: (itemId) =>
                 set((state) => ({
@@ -40,7 +51,6 @@ export const useStore = create<Store>()(
                 return getTopicProgress(topicId, topics, completed);
             },
             isItemCompleted: (itemId) => !!get().completed[itemId],
-
             drafts: {},
             saveDraftForExercise: (itemId, code) =>
                 set((state) => ({
@@ -52,10 +62,17 @@ export const useStore = create<Store>()(
             name: "subject",
             partialize: (state) => ({
                 subject: state.subject,
-                lastActivity: state.lastActivity,
+                _lastActivityMap: state._lastActivityMap,
                 completed: state.completed,
                 drafts: state.drafts,
             }),
+            onRehydrateStorage: () => (state) => {
+                if (state) {
+                    state.lastActivity =
+                        state._lastActivityMap[state.subject] ?? null;
+                    console.log(state.lastActivity);
+                }
+            },
         },
     ),
 );
