@@ -56,7 +56,7 @@ export default function Home() {
                                 Welcome to SuvriddhiOS!
                             </h1>
                             <p className="text-xl text-muted-foreground mb-8">
-                                Choose your subject to get started
+                                Click to change subject
                             </p>
                             <Subjectselector
                                 newUser={true}
@@ -75,7 +75,7 @@ export default function Home() {
                                 Welcome back!
                             </h1>
                             <p className="mt-4 text-lg text-muted-foreground">
-                                Select Your Subject
+                                Click to change subject
                             </p>
                             <Subjectselector
                                 newUser={false}
