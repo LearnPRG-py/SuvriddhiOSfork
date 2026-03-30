@@ -99,7 +99,7 @@ body {
 `;
 
 export default function LearnPage() {
-    const [pdf, setPdf] = useState(null);
+    const [pdf, setPdf] = useState<string | null>(null);
 
     const books = [
         { name: "Physics Data Booklet", path: "/pdfs/physics.pdf" },

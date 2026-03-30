@@ -44,7 +44,12 @@ export default function DatasheetSelector() {
 
     const handleSelect = (theme: Theme) => {
         const subjectPath = routeMap[theme.id];
-        setSubject(subjectPath === "chem" ? "chemistry" : subjectPath);
+        const subject =
+            subjectPath === "chem"
+                ? "Chemistry"
+                : (subjectPath as "Physics" | "Math");
+
+        setSubject(subject);
         navigate(`/data/${subjectPath}`);
     };
 

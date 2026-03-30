@@ -198,7 +198,9 @@ const CATS = {
     actinide: { c: "#FFA8A8", g: "rgba(255,168,168,.4)", l: "Actinide" },
 };
 
-const EL = [
+type CatKeys = keyof typeof CATS;
+
+const EL: ElementType[] = [
     {
         z: 1,
         sym: "H",
@@ -1976,9 +1978,22 @@ const EL = [
 const CW = 44,
     CH = 50,
     GAP = 2;
-const fmt = (v, u = "") => (v === null || v === undefined ? "—" : `${v}${u}`);
+const fmt = (v: number | null | undefined, u: string = "") =>
+    v === null || v === undefined ? "—" : `${v}${u}`;
 
-function DataBar({ label, value, max, unit, color }) {
+function DataBar({
+    label,
+    value,
+    max,
+    unit,
+    color,
+}: {
+    label: string;
+    value: number | null;
+    max: number;
+    unit: string;
+    color?: string;
+}) {
     const pct =
         value != null && max ? Math.min(100, (Math.abs(value) / max) * 100) : 0;
     return (
@@ -2015,7 +2030,28 @@ function DataBar({ label, value, max, unit, color }) {
     );
 }
 
-function Modal({ el, onClose }) {
+type ElementType = {
+    z: number;
+    sym: string;
+    name: string;
+    mass: number;
+    row: number;
+    col: number;
+    cat: CatKeys;
+    mp: number | null;
+    bp: number | null;
+    ie1: number | null;
+    ea: number | null;
+    en: number | null;
+    ar: number | null;
+};
+
+type ModalProps = {
+    el: ElementType;
+    onClose: () => void;
+};
+
+function Modal({ el, onClose }: ModalProps) {
     const cat = CATS[el.cat];
     const c = cat.c;
     return (
@@ -2172,10 +2208,12 @@ function Modal({ el, onClose }) {
                         marginTop: 4,
                     }}
                 >
-                    {[
-                        ["Melting Point", el.mp, " °C"],
-                        ["Boiling Point", el.bp, " °C"],
-                    ].map(([l, v, u]) => (
+                    {(
+                        [
+                            ["Melting Point", el.mp, " °C"],
+                            ["Boiling Point", el.bp, " °C"],
+                        ] as [string, number | null | undefined, string][]
+                    ).map(([l, v, u]) => (
                         <div
                             key={l}
                             style={{
@@ -2226,10 +2264,16 @@ function Modal({ el, onClose }) {
     );
 }
 
-function ElCell({ el, onClick, filterCat }) {
+type ElCellProps = {
+    el: ElementType;
+    onClick: (el: ElementType) => void;
+    activeCat: keyof typeof CATS | null;
+};
+
+function ElCell({ el, onClick, activeCat }: ElCellProps) {
     const [hov, setHov] = useState(false);
     const cat = CATS[el.cat];
-    const dimmed = filterCat && filterCat !== el.cat;
+    const dimmed = activeCat != null && activeCat !== el.cat;
     const delay = `${el.z * 4}ms`;
 
     return (
@@ -2406,8 +2450,9 @@ const CHEM_EXTENDED = {
         { name: "Halogenoalkane", formula: "R-X" },
     ],
 };
+type ChemDataRow = Record<string, string | number>;
 
-function ChemTables({ data }) {
+function ChemTables({ data }: { data: Record<string, ChemDataRow[]> }) {
     return (
         <div style={{ marginTop: 40 }}>
             {Object.entries(data).map(([sectionName, rows]) => (
@@ -2470,17 +2515,17 @@ function ChemTables({ data }) {
     );
 }
 
-function formatTitle(name) {
+function formatTitle(name: string) {
     return name
         .replace(/([A-Z])/g, " $1")
         .replace(/^./, (s) => s.toUpperCase());
 }
 
 export default function PeriodicTable() {
-    const [selected, setSelected] = useState(null);
-    const [filterCat, setFilterCat] = useState(null);
+    const [selected, setSelected] = useState<ElementType | null>(null);
+    const [filterCat, setFilterCat] = useState<keyof typeof CATS | null>(null);
 
-    const toggleFilter = (cat) =>
+    const toggleFilter = (cat: CatKeys) =>
         setFilterCat((prev) => (prev === cat ? null : cat));
 
     return (
@@ -2526,7 +2571,7 @@ export default function PeriodicTable() {
                     <div
                         key={key}
                         className="chip"
-                        onClick={() => toggleFilter(key)}
+                        onClick={() => toggleFilter(key as keyof typeof CATS)}
                         style={{
                             background: filterCat === key ? `${c}33` : `${c}10`,
                             border: `1px solid ${filterCat === key ? c : c + "44"}`,
@@ -2570,65 +2615,10 @@ export default function PeriodicTable() {
                         <ElCell
                             el={el}
                             onClick={setSelected}
-                            filterCat={filterCat}
+                            activeCat={filterCat}
                         />
                     </div>
                 ))}
-
-                {/* La/Ac markers at row 6-7 col 3 */}
-                {[
-                    { row: 6, label: "La–Lu" },
-                    { row: 7, label: "Ac–Lr" },
-                ].map(({ row, label }) =>
-                    !MAIN.some(
-                        (e) =>
-                            e.row === row &&
-                            e.col === 3 &&
-                            e.cat !== "lanthanide" &&
-                            e.cat !== "actinide",
-                    ) ? null : (
-                        <div
-                            key={label}
-                            style={{
-                                gridColumn: 3,
-                                gridRow: row,
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                fontSize: 8,
-                                color:
-                                    row === 6
-                                        ? CATS.lanthanide.c + "88"
-                                        : CATS.actinide.c + "88",
-                                fontFamily: "'Space Mono'",
-                            }}
-                        />
-                    ),
-                )}
-            </div>
-
-            {/* F-block separator */}
-            <div
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    margin: "10px 0 6px",
-                    paddingLeft: 3 * (CW + GAP),
-                }}
-            >
-                <div style={{ height: 1, width: 30, background: "#1a1a30" }} />
-                <span
-                    style={{
-                        fontSize: 8,
-                        color: "#22223a",
-                        letterSpacing: ".5px",
-                        textTransform: "uppercase",
-                    }}
-                >
-                    f-block
-                </span>
-                <div style={{ height: 1, flex: 1, background: "#1a1a30" }} />
             </div>
 
             {/* F-block grid */}
@@ -2639,6 +2629,7 @@ export default function PeriodicTable() {
                     gridTemplateRows: `repeat(2, ${CH}px)`,
                     gap: GAP,
                     paddingLeft: 3 * (CW + GAP),
+                    marginTop: 6,
                 }}
             >
                 {FBLOCK.map((el) => (
@@ -2649,27 +2640,19 @@ export default function PeriodicTable() {
                         <ElCell
                             el={el}
                             onClick={setSelected}
-                            filterCat={filterCat}
+                            activeCat={filterCat}
                         />
                     </div>
                 ))}
             </div>
 
-            {/* Row labels for f-block */}
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    position: "relative",
-                }}
-            ></div>
-
             {/* Modal */}
             {selected && (
                 <Modal el={selected} onClose={() => setSelected(null)} />
             )}
+
+            {/* Extended tables */}
             <ChemTables data={CHEM_EXTENDED} />
         </div>
     );
 }
-// I like feet

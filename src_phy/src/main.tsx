@@ -6,16 +6,28 @@ import "./styles/fonts.css";
 
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
-import Achievements from "./components/data_table/Chem";
-import Notes from "./components/study_zone/Notes";
+import DatasheetSelector from "./pages/Data";
+import PeriodicTable from "./components/data_table/Chem";
+import PhyTables from "./components/data_table/Phy";
+import MathTables from "./components/data_table/Math";
+import SubjectSelector from "./pages/Study";
 import Settings from "./pages/Settings";
+import Notes from "./components/study_zone/Notes";
+import FlashcardApp from "./components/study_zone/Flashcard";
+import LearnPage from "./components/study_zone/pdf_thing";
 
 const router = createBrowserRouter([
     { path: "/", element: <Home /> },
     { path: "/learn", element: <Learn /> },
-    { path: "/achievements", element: <Achievements /> },
-    { path: "/notes", element: <Notes /> },
+    { path: "/data", element: <DatasheetSelector /> },
+    { path: "/data/chem", element: <PeriodicTable /> },
+    { path: "/data/physics", element: <PhyTables /> },
+    { path: "/data/math", element: <MathTables /> },
+    { path: "/notes", element: <SubjectSelector /> },
     { path: "/settings", element: <Settings /> },
+    { path: "/study/notes", element: <Notes /> },
+    { path: "/study/flashcards", element: <FlashcardApp /> },
+    { path: "/study/books", element: <LearnPage /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

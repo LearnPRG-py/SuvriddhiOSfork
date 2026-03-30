@@ -39,14 +39,19 @@ const routeMap: Record<string, string> = {
     "3": "math",
 };
 
-export default function DatasheetSelector() {
+export default function SubjectSelector() {
     const navigate = useNavigate();
-    const { setSubject } = useStore();
 
     const handleSelect = (theme: Theme) => {
-        const subjectPath = routeMap[theme.id];
-        setSubject(subjectPath === "chem" ? "chemistry" : subjectPath);
-        navigate(`/study_zone/${subjectPath}`);
+        if (theme.id == "1") {
+            navigate(`/study/flashcards`);
+        }
+        if (theme.id == "2") {
+            navigate(`/study/notes`);
+        }
+        if (theme.id == "2") {
+            navigate(`/study/books`);
+        }
     };
 
     return (
