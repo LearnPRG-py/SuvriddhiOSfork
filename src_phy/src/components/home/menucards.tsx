@@ -14,7 +14,7 @@ const buttons = [
         title: "Data Table",
         desc: "A directory with data like constants, the periodic table and formulae",
         icon: <Table size={32} />,
-        to: "/achievements",
+        to: "/data",
     },
     {
         id: 2,

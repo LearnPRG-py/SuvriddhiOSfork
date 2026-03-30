@@ -22,7 +22,6 @@ const STYLES = `
     gap: 2rem;
   }
 
-  /* ── Header ── */
   .header {
     display: flex;
     width: 100%;
@@ -52,7 +51,6 @@ const STYLES = `
   }
   .add-btn:hover { border-color: #e8e4dc; color: #e8e4dc; }
 
-  /* ── Topic Filter ── */
   .topics {
     display: flex;
     gap: 0.5rem;
@@ -78,7 +76,6 @@ const STYLES = `
   .topic-chip:hover { border-color: #555; color: #888; }
   .topic-chip.active { border-color: #e8e4dc; color: #e8e4dc; background: #1a1a1a; }
 
-  /* ── Card ── */
   .card-scene {
     width: 560px;
     height: 315px;
@@ -159,7 +156,6 @@ const STYLES = `
     letter-spacing: 0.05em;
   }
 
-  /* ── Nav ── */
   .nav {
     display: flex;
     align-items: center;
@@ -190,7 +186,6 @@ const STYLES = `
     text-align: center;
   }
 
-  /* ── Progress Bar ── */
   .progress-bar-bg {
     width: 560px;
     height: 2px;
@@ -206,7 +201,6 @@ const STYLES = `
     transition: width 0.3s ease;
   }
 
-  /* ── Add Card Modal ── */
   .modal-overlay {
     position: fixed;
     inset: 0;
@@ -394,7 +388,6 @@ export default function FlashcardApp() {
         <>
             <style>{STYLES}</style>
             <div className="app">
-                {/* Header */}
                 <div className="header">
                     <span className="title">flashcards</span>
                     <button
@@ -405,7 +398,6 @@ export default function FlashcardApp() {
                     </button>
                 </div>
 
-                {/* Topic Filter */}
                 <div className="topics">
                     {topics.map((t) => (
                         <button
@@ -418,7 +410,6 @@ export default function FlashcardApp() {
                     ))}
                 </div>
 
-                {/* Card */}
                 {current ? (
                     <div className="card-scene" onClick={onClickCard}>
                         <div
@@ -454,7 +445,6 @@ export default function FlashcardApp() {
                     </div>
                 )}
 
-                {/* Progress Bar */}
                 <div className="progress-bar-bg">
                     <div
                         className="progress-bar-fill"
@@ -462,7 +452,6 @@ export default function FlashcardApp() {
                     />
                 </div>
 
-                {/* Nav */}
                 <div className="nav">
                     <button
                         className="nav-btn"
@@ -486,7 +475,6 @@ export default function FlashcardApp() {
                 </div>
             </div>
 
-            {/* Add Card Modal */}
             {showAddCard && (
                 <div
                     className="modal-overlay"
