@@ -1,6 +1,5 @@
 // Ported from codefest themes page
 import { useNavigate } from "react-router";
-import { useStore } from "../store/useStore";
 
 interface Theme {
     id: string;
@@ -32,12 +31,6 @@ const themes: Theme[] = [
         backgroundImage: "/books.jpg",
     },
 ];
-
-const routeMap: Record<string, string> = {
-    "1": "physics",
-    "2": "chem",
-    "3": "math",
-};
 
 export default function SubjectSelector() {
     const navigate = useNavigate();
