@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@embedpdf/react-pdf-viewer": "^2.10.1",
     "@preact/preset-vite": "^2.10.3",
     "@tailwindcss/vite": "^4.1.15",
     "@tiptap/pm": "^3.8.0",
