@@ -19,6 +19,9 @@ package/jack2/0001-Update-to-waf-2-0-26.patch
 
 # macOS metadata
 **/.DS_Store
+
+# PCM pdfs. Need to be downloaded from drive per instructions in 
+# src_phy/public/pdfs/get_pdfs.md
 src_phy/public/pdfs/Statistics-WEB.pdf
 src_phy/public/pdfs/Precalculus_2e-WEB.pdf
 src_phy/public/pdfs/Prealgebra2e-WEB_0qbw93r.pdf

@@ -445,7 +445,6 @@ function FormulaeSection({
     );
 }
 
-// ── main export ────────────────────────────────────────────────────────────
 export default function MathTables() {
     const grouped = groupBy(MATH_FORMULAE, "topic");
 

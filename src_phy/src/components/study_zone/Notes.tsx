@@ -57,7 +57,6 @@ export default function Notes() {
     const defaultKey = subjectToKey[subject] ?? notebooks[0].key;
     const [currentFile, setCurrentFile] = useState(defaultKey);
 
-    // Load initial content synchronously before useEditor runs
     const initialContent = useMemo(
         () => loadNotebook(defaultKey),
         [defaultKey],
@@ -86,7 +85,6 @@ export default function Notes() {
         },
     });
 
-    // Swap content when notebook changes
     useEffect(() => {
         if (!editor) return;
         const content = loadNotebook(currentFile);
@@ -94,7 +92,6 @@ export default function Notes() {
     }, [currentFile, editor]);
 
     const handleNotebookSwitch = (newKey: string) => {
-        // Flush save for current notebook before switching
         if (debounceRef.current) clearTimeout(debounceRef.current);
         saveNotebook(currentFile, editor);
         setCurrentFile(newKey);

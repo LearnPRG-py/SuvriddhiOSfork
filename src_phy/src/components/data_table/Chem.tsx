@@ -2068,7 +2068,6 @@ function Modal({ el, onClose }: ModalProps) {
                     ✕
                 </button>
 
-                {/* Header */}
                 <div
                     style={{
                         display: "flex",
@@ -2154,7 +2153,6 @@ function Modal({ el, onClose }: ModalProps) {
                     </div>
                 </div>
 
-                {/* Divider */}
                 <div
                     style={{
                         height: 1,
@@ -2163,7 +2161,6 @@ function Modal({ el, onClose }: ModalProps) {
                     }}
                 />
 
-                {/* Data bars */}
                 <DataBar
                     label="1st Ionisation Energy"
                     value={el.ie1}
@@ -2199,7 +2196,6 @@ function Modal({ el, onClose }: ModalProps) {
                     color={c}
                 />
 
-                {/* Temp row */}
                 <div
                     style={{
                         display: "grid",
@@ -2247,7 +2243,6 @@ function Modal({ el, onClose }: ModalProps) {
                     ))}
                 </div>
 
-                {/* Footer */}
                 <div
                     style={{
                         marginTop: 16,
@@ -2561,7 +2556,6 @@ export default function PeriodicTable() {
                 </svg>
             </a>
 
-            {/* Header */}
             <div style={{ marginBottom: 14 }}>
                 <h1
                     style={{
@@ -2587,7 +2581,6 @@ export default function PeriodicTable() {
                 </p>
             </div>
 
-            {/* Legend */}
             <div
                 style={{
                     display: "flex",
@@ -2626,7 +2619,6 @@ export default function PeriodicTable() {
                 )}
             </div>
 
-            {/* Main grid */}
             <div
                 style={{
                     position: "relative",
@@ -2650,7 +2642,6 @@ export default function PeriodicTable() {
                 ))}
             </div>
 
-            {/* F-block grid */}
             <div
                 style={{
                     display: "grid",
@@ -2675,12 +2666,10 @@ export default function PeriodicTable() {
                 ))}
             </div>
 
-            {/* Modal */}
             {selected && (
                 <Modal el={selected} onClose={() => setSelected(null)} />
             )}
 
-            {/* Extended tables */}
             <ChemTables data={CHEM_EXTENDED} />
         </div>
     );
