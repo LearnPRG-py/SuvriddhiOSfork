@@ -1,6 +1,5 @@
 // Ported from codefest themes page
 import { useNavigate } from "react-router";
-import { useStore } from "../store/useStore";
 
 interface Theme {
     id: string;
@@ -40,21 +39,40 @@ const routeMap: Record<string, string> = {
 
 export default function DatasheetSelector() {
     const navigate = useNavigate();
-    const { setSubject } = useStore();
 
     const handleSelect = (theme: Theme) => {
         const subjectPath = routeMap[theme.id];
-        const subject =
-            subjectPath === "chem"
-                ? "Chemistry"
-                : (subjectPath as "Physics" | "Math");
-
-        setSubject(subject);
         navigate(`/data/${subjectPath}`);
     };
 
     return (
         <div className="min-h-screen bg-[#0f0f0f] text-white">
+            <a
+                href="/"
+                data-discover="true"
+                className="hover:text-primary transition-colors ml-[97%] mt-[2%]"
+                style={{
+                    zIndex: 50,
+                    display: "inline-flex",
+                }}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    className="lucide lucide-house"
+                >
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+            </a>
             <section className="py-20 px-6 text-center">
                 <h1 className="text-5xl md:text-6xl font-bold text-[#1e96a5] mb-6">
                     Explore Subject Data

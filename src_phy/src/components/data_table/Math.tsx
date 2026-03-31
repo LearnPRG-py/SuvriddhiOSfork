@@ -1,294 +1,370 @@
+import { SHARED_STYLE } from "./shared_styles";
+
 type MathConstant = {
-    name: string | null;
-    symbol: string | null;
-    value: number | null;
-    units: string | null;
+    name: string;
+    symbol: string;
+    value: number;
+    description: string;
+};
+
+type MathFormula = {
+    name: string;
+    equation: string;
+    topic: string;
 };
 
 const MATH_CONSTANTS: MathConstant[] = [
-    { name: "Pi", symbol: "π", value: 3.141592653589793, units: null },
+    {
+        name: "Pi",
+        symbol: "π",
+        value: 3.141592653589793,
+        description: "Ratio of circumference to diameter",
+    },
     {
         name: "Euler's number",
         symbol: "e",
         value: 2.718281828459045,
-        units: null,
+        description: "Base of natural logarithm",
     },
-    { name: "Golden ratio", symbol: "φ", value: 1.61803398875, units: null },
     {
-        name: "Square root of 2",
+        name: "Golden ratio",
+        symbol: "φ",
+        value: 1.618033988749895,
+        description: "(1 + √5) / 2",
+    },
+    {
+        name: "√2",
         symbol: "√2",
         value: 1.41421356237,
-        units: null,
+        description: "Diagonal of unit square",
     },
     {
-        name: "Square root of 3",
+        name: "√3",
         symbol: "√3",
         value: 1.73205080757,
-        units: null,
+        description: "Height of equilateral triangle (side = 2)",
+    },
+    {
+        name: "ln 2",
+        symbol: "ln 2",
+        value: 0.6931471805599453,
+        description: "Natural log of 2",
     },
     {
         name: "Apéry's constant",
         symbol: "ζ(3)",
-        value: 1.20205690316,
-        units: null,
+        value: 1.2020569031595942,
+        description: "Σ 1/n³",
     },
     {
         name: "Catalan's constant",
         symbol: "G",
-        value: 0.915965594,
-        units: null,
+        value: 0.915965594177219,
+        description: "Alternating sum of reciprocal odd squares",
     },
     {
-        name: "Feigenbaum constant δ",
+        name: "Feigenbaum δ",
         symbol: "δ",
-        value: 4.6692016091,
-        units: null,
+        value: 4.6692016091029906,
+        description: "Bifurcation ratio in chaos theory",
     },
     {
-        name: "Feigenbaum constant α",
+        name: "Feigenbaum α",
         symbol: "α",
-        value: 2.502907875,
-        units: null,
+        value: 2.5029078750958928,
+        description: "Scaling ratio in bifurcation diagrams",
     },
 ];
-type MathFormulae = {
-    name: string | null;
-    equation: string | null;
-    topic: string | null;
-};
 
-const MATH_FORMULAE: MathFormulae[] = [
-    // Algebra
+const MATH_FORMULAE: MathFormula[] = [
+    // algebra
     {
         name: "Quadratic formula",
-        equation: "x = (-b ± √(b²-4ac)) / 2a",
+        equation: "x = (−b ± √(b²−4ac)) / 2a",
         topic: "algebra",
     },
     {
-        name: "Arithmetic series sum",
-        equation: "S_n = n/2 (a_1 + a_n)",
+        name: "Arithmetic series",
+        equation: "Sₙ = n/2 (a₁ + aₙ)",
         topic: "algebra",
     },
     {
-        name: "Geometric series sum",
-        equation: "S_n = a(1 - r^n)/(1 - r)",
+        name: "Geometric series",
+        equation: "Sₙ = a(1 − rⁿ) / (1 − r)",
+        topic: "algebra",
+    },
+    {
+        name: "Infinite geometric",
+        equation: "S∞ = a / (1 − r),  |r| < 1",
         topic: "algebra",
     },
     {
         name: "Binomial theorem",
-        equation: "(a+b)^n = Σ (nCk) a^(n-k) b^k",
+        equation: "(a+b)ⁿ = Σ C(n,k) aⁿ⁻ᵏ bᵏ",
         topic: "algebra",
     },
-    { name: "Permutations", equation: "nPr = n! / (n-r)!", topic: "algebra" },
+    { name: "Permutations", equation: "nPr = n! / (n−r)!", topic: "algebra" },
+    { name: "Combinations", equation: "nCr = n! / r!(n−r)!", topic: "algebra" },
     {
-        name: "Combinations",
-        equation: "nCr = n! / (r!(n-r)!)",
+        name: "Logarithm change base",
+        equation: "log_b a = ln a / ln b",
         topic: "algebra",
     },
+    {
+        name: "Log product rule",
+        equation: "log(xy) = log x + log y",
+        topic: "algebra",
+    },
+    { name: "Log power rule", equation: "log(xⁿ) = n log x", topic: "algebra" },
 
-    // Geometry - Triangles
-    { name: "Pythagoras theorem", equation: "a² + b² = c²", topic: "geometry" },
+    // geometry
+    { name: "Pythagoras", equation: "a² + b² = c²", topic: "geometry" },
+    { name: "Area — triangle", equation: "A = ½bh", topic: "geometry" },
     {
-        name: "Area of triangle (1/2 base×height)",
-        equation: "A = ½ b h",
+        name: "Area — Heron's",
+        equation: "A = √[s(s−a)(s−b)(s−c)]",
         topic: "geometry",
     },
-    {
-        name: "Area of triangle (Heron's formula)",
-        equation: "A = √[s(s-a)(s-b)(s-c)]",
-        topic: "geometry",
-    },
-    {
-        name: "Triangle area (trig)",
-        equation: "A = ½ ab sin C",
-        topic: "geometry",
-    },
-    {
-        name: "Centroid",
-        equation: "G = ((x1+x2+x3)/3 , (y1+y2+y3)/3)",
-        topic: "geometry",
-    },
-    {
-        name: "Circumcenter",
-        equation: "Intersection of perpendicular bisectors",
-        topic: "geometry",
-    },
-    {
-        name: "Incenter",
-        equation: "Intersection of angle bisectors",
-        topic: "geometry",
-    },
-    {
-        name: "Orthocenter",
-        equation: "Intersection of altitudes",
-        topic: "geometry",
-    },
-    {
-        name: "30-60-90 triangle ratios",
-        equation: "1 : √3 : 2",
-        topic: "geometry",
-    },
-    {
-        name: "45-45-90 triangle ratios",
-        equation: "1 : 1 : √2",
-        topic: "geometry",
-    },
+    { name: "Area — trig", equation: "A = ½ ab sinC", topic: "geometry" },
+    { name: "Area — rectangle", equation: "A = lw", topic: "geometry" },
+    { name: "Area — parallelogram", equation: "A = bh", topic: "geometry" },
+    { name: "Area — trapezium", equation: "A = ½(a + b)h", topic: "geometry" },
+    { name: "Area — circle", equation: "A = πr²", topic: "geometry" },
+    { name: "Arc length", equation: "L = rθ", topic: "geometry" },
+    { name: "Sector area", equation: "A = ½r²θ", topic: "geometry" },
+    { name: "Volume — sphere", equation: "V = 4/3 πr³", topic: "geometry" },
+    { name: "Volume — cylinder", equation: "V = πr²h", topic: "geometry" },
+    { name: "Volume — cone", equation: "V = ⅓πr²h", topic: "geometry" },
 
-    // Geometry - Circles
-    {
-        name: "Circumference of circle",
-        equation: "C = 2 π r",
-        topic: "geometry",
-    },
-    { name: "Area of circle", equation: "A = π r²", topic: "geometry" },
-    {
-        name: "Arc length",
-        equation: "L = θ r (θ in radians)",
-        topic: "geometry",
-    },
-    { name: "Sector area", equation: "A_sector = ½ r² θ", topic: "geometry" },
-    {
-        name: "Circle equation",
-        equation: "(x-h)² + (y-k)² = r²",
-        topic: "coordinate geometry",
-    },
-    {
-        name: "Angle in semicircle",
-        equation: "∠ = 90°",
-        topic: "circle theorems",
-    },
-    {
-        name: "Tangent-secant theorem",
-        equation: "PA² = PT²",
-        topic: "circle theorems",
-    },
-    {
-        name: "Cyclic quadrilateral",
-        equation: "Opposite angles sum = 180°",
-        topic: "circle theorems",
-    },
-    {
-        name: "Angle between chord and tangent",
-        equation: "∠ = angle in alternate segment",
-        topic: "circle theorems",
-    },
-
-    // Geometry - Quadrilaterals
-    { name: "Area of rectangle", equation: "A = l × w", topic: "geometry" },
-    { name: "Area of square", equation: "A = a²", topic: "geometry" },
-    { name: "Area of parallelogram", equation: "A = b × h", topic: "geometry" },
-    { name: "Area of rhombus", equation: "A = ½ × d1 × d2", topic: "geometry" },
-    { name: "Area of trapezium", equation: "A = ½ (a+b)h", topic: "geometry" },
-
-    // Trigonometry
+    // trigonometry
     {
         name: "Sine rule",
-        equation: "a/sin A = b/sin B = c/sin C",
+        equation: "a/sinA = b/sinB = c/sinC",
         topic: "trigonometry",
     },
     {
         name: "Cosine rule",
-        equation: "c² = a² + b² - 2ab cos C",
+        equation: "c² = a² + b² − 2ab cosC",
         topic: "trigonometry",
     },
-    { name: "tan θ", equation: "tan θ = sin θ / cos θ", topic: "trigonometry" },
     {
-        name: "Basic trig identities",
+        name: "tan identity",
+        equation: "tanθ = sinθ / cosθ",
+        topic: "trigonometry",
+    },
+    {
+        name: "Pythagorean identity",
         equation: "sin²θ + cos²θ = 1",
         topic: "trigonometry",
     },
     {
-        name: "Angle sum formula",
-        equation: "sin(A±B) = sinA cosB ± cosA sinB",
+        name: "sin sum formula",
+        equation: "sin(A ± B) = sinA cosB ± cosA sinB",
         topic: "trigonometry",
     },
     {
-        name: "Cosine sum formula",
-        equation: "cos(A±B) = cosA cosB ∓ sinA sinB",
+        name: "cos sum formula",
+        equation: "cos(A ± B) = cosA cosB ∓ sinA sinB",
         topic: "trigonometry",
     },
     {
-        name: "Double angle formulas",
-        equation: "sin2A=2sinAcosA, cos2A=cos²A−sin²A",
+        name: "Double angle — sin",
+        equation: "sin 2A = 2 sinA cosA",
         topic: "trigonometry",
     },
     {
-        name: "Half angle formulas",
-        equation: "sin²(A/2) = (1−cosA)/2, cos²(A/2) = (1+cosA)/2",
+        name: "Double angle — cos",
+        equation: "cos 2A = cos²A − sin²A",
         topic: "trigonometry",
     },
     {
-        name: "Special angles",
-        equation: "sin30=½, sin45=√2/2, sin60=√3/2",
+        name: "Special: sin 30°",
+        equation: "sin 30° = ½,  cos 30° = √3/2",
+        topic: "trigonometry",
+    },
+    {
+        name: "Special: sin 45°",
+        equation: "sin 45° = cos 45° = √2/2",
         topic: "trigonometry",
     },
 
-    // Vectors
+    // coordinate geometry
     {
-        name: "Magnitude of vector",
-        equation: "|v| = √(x² + y² + z²)",
-        topic: "vectors",
+        name: "Distance",
+        equation: "d = √((x₂−x₁)² + (y₂−y₁)²)",
+        topic: "coordinate geometry",
     },
-    { name: "Dot product", equation: "A·B = |A||B| cos θ", topic: "vectors" },
+    {
+        name: "Midpoint",
+        equation: "M = ((x₁+x₂)/2, (y₁+y₂)/2)",
+        topic: "coordinate geometry",
+    },
+    {
+        name: "Gradient",
+        equation: "m = (y₂ − y₁) / (x₂ − x₁)",
+        topic: "coordinate geometry",
+    },
+    {
+        name: "Line equation",
+        equation: "y − y₁ = m(x − x₁)",
+        topic: "coordinate geometry",
+    },
+    {
+        name: "Circle equation",
+        equation: "(x−h)² + (y−k)² = r²",
+        topic: "coordinate geometry",
+    },
+
+    // vectors
+    { name: "Magnitude", equation: "|v| = √(x² + y² + z²)", topic: "vectors" },
+    { name: "Dot product", equation: "A · B = |A||B| cosθ", topic: "vectors" },
     {
         name: "Cross product",
-        equation: "A×B = |A||B| sin θ n̂",
+        equation: "|A × B| = |A||B| sinθ",
         topic: "vectors",
     },
     { name: "Unit vector", equation: "û = v / |v|", topic: "vectors" },
 
-    // Complex numbers
+    // complex numbers
     { name: "Modulus", equation: "|z| = √(x² + y²)", topic: "complex numbers" },
     {
         name: "Argument",
-        equation: "arg(z) = tan⁻¹(y/x)",
+        equation: "arg(z) = tan⁻¹(y / x)",
         topic: "complex numbers",
     },
     {
-        name: "De Moivre",
-        equation: "z^n = r^n (cos nθ + i sin nθ)",
+        name: "Euler's formula",
+        equation: "e^(iθ) = cosθ + i sinθ",
+        topic: "complex numbers",
+    },
+    {
+        name: "De Moivre's theorem",
+        equation: "zⁿ = rⁿ(cos nθ + i sin nθ)",
         topic: "complex numbers",
     },
 
-    // Coordinate geometry
+    // calculus
     {
-        name: "Distance formula",
-        equation: "d = √((x2-x1)² + (y2-y1)²)",
-        topic: "coordinate geometry",
+        name: "Derivative — power",
+        equation: "d/dx (xⁿ) = nxⁿ⁻¹",
+        topic: "calculus",
     },
     {
-        name: "Midpoint formula",
-        equation: "M = ((x1+x2)/2 , (y1+y2)/2)",
-        topic: "coordinate geometry",
+        name: "Derivative — product",
+        equation: "(uv)' = u'v + uv'",
+        topic: "calculus",
     },
     {
-        name: "Slope formula",
-        equation: "m = (y2 - y1)/(x2 - x1)",
-        topic: "coordinate geometry",
+        name: "Derivative — quotient",
+        equation: "(u/v)' = (u'v − uv') / v²",
+        topic: "calculus",
+    },
+    {
+        name: "Derivative — chain",
+        equation: "dy/dx = dy/du · du/dx",
+        topic: "calculus",
+    },
+    { name: "Derivative — eˣ", equation: "d/dx (eˣ) = eˣ", topic: "calculus" },
+    {
+        name: "Derivative — ln x",
+        equation: "d/dx (ln x) = 1/x",
+        topic: "calculus",
+    },
+    {
+        name: "Integral — power",
+        equation: "∫ xⁿ dx = xⁿ⁺¹/(n+1) + C",
+        topic: "calculus",
+    },
+    {
+        name: "Integration by parts",
+        equation: "∫ u dv = uv − ∫ v du",
+        topic: "calculus",
+    },
+    {
+        name: "Fundamental theorem",
+        equation: "∫ₐᵇ f dx = F(b) − F(a)",
+        topic: "calculus",
+    },
+
+    // probability & stats
+    {
+        name: "Probability",
+        equation: "P(A) = n(A) / n(S)",
+        topic: "probability",
+    },
+    { name: "Complement", equation: "P(A') = 1 − P(A)", topic: "probability" },
+    {
+        name: "Addition rule",
+        equation: "P(A∪B) = P(A) + P(B) − P(A∩B)",
+        topic: "probability",
+    },
+    {
+        name: "Bayes' theorem",
+        equation: "P(A|B) = P(B|A)P(A) / P(B)",
+        topic: "probability",
+    },
+    { name: "Mean", equation: "μ = Σx / n", topic: "probability" },
+    { name: "Variance", equation: "σ² = Σ(x − μ)² / n", topic: "probability" },
+    {
+        name: "Standard deviation",
+        equation: "σ = √(Σ(x − μ)² / n)",
+        topic: "probability",
     },
 ];
 
-function PhyConstTable({ data }: { data: MathConstant[] }) {
+function groupBy<T>(arr: T[], key: keyof T): Record<string, T[]> {
+    return arr.reduce(
+        (acc, item) => {
+            const k = String(item[key]);
+            (acc[k] ??= []).push(item);
+            return acc;
+        },
+        {} as Record<string, T[]>,
+    );
+}
+
+const TOPIC_COLOR: Record<string, string> = {
+    algebra: "#FF9A3C",
+    geometry: "#51CF66",
+    trigonometry: "#F783AC",
+    "coordinate geometry": "#74C0FC",
+    vectors: "#3BC9C9",
+    "complex numbers": "#DA77F2",
+    calculus: "#C8E84B",
+    probability: "#FFA8A8",
+};
+
+function ConstantsTable({ data }: { data: MathConstant[] }) {
     return (
-        <div style={{ marginTop: 40 }}>
-            <h1 style={{ textAlign: "center", marginBottom: 20 }}>
-                Physical Constants
-            </h1>
+        <div className="data-section">
+            <div className="section-heading">Mathematical Constants</div>
             <table className="phy-table">
                 <thead>
                     <tr>
-                        {["Name", "Symbol", "Value", "Units"].map((col) => (
-                            <th key={col}>{col}</th>
+                        {["Name", "Symbol", "Value", "Notes"].map((h) => (
+                            <th key={h}>{h}</th>
                         ))}
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((row, i) => (
-                        <tr key={i}>
-                            <td>{row.name ?? "-"}</td>
-                            <td>{row.symbol ?? "-"}</td>
-                            <td>{row.value ?? "-"}</td>
-                            <td>{row.units ?? "-"}</td>
+                        <tr
+                            key={i}
+                            onMouseEnter={(e) =>
+                                (e.currentTarget.style.background = "#0d0d22")
+                            }
+                            onMouseLeave={(e) =>
+                                (e.currentTarget.style.background = "")
+                            }
+                        >
+                            <td>{row.name}</td>
+                            <td style={{ color: "#FF9A3C", fontWeight: 700 }}>
+                                {row.symbol}
+                            </td>
+                            <td style={{ color: "#C8E84B" }}>{row.value}</td>
+                            <td style={{ color: "#555", fontSize: 10 }}>
+                                {row.description}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -297,25 +373,70 @@ function PhyConstTable({ data }: { data: MathConstant[] }) {
     );
 }
 
-function PhyFormulaTable({ data }: { data: MathFormulae[] }) {
+function FormulaeSection({
+    topic,
+    rows,
+}: {
+    topic: string;
+    rows: MathFormula[];
+}) {
+    const c = TOPIC_COLOR[topic] ?? "#888";
     return (
-        <div style={{ marginTop: 40 }}>
-            <h1 style={{ textAlign: "center", marginBottom: 20 }}>
-                Physics Formulae
-            </h1>
+        <div style={{ marginBottom: 24 }}>
+            <div
+                style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    marginBottom: 8,
+                }}
+            >
+                <div
+                    style={{
+                        width: 6,
+                        height: 6,
+                        borderRadius: "50%",
+                        background: c,
+                        boxShadow: `0 0 6px ${c}`,
+                    }}
+                />
+                <span
+                    style={{
+                        fontSize: 9,
+                        color: c,
+                        textTransform: "uppercase",
+                        letterSpacing: "1px",
+                        fontFamily: "'Space Mono'",
+                    }}
+                >
+                    {topic}
+                </span>
+            </div>
             <table className="phy-table">
-                <thead>
-                    <tr>
-                        {["Name", "Equation"].map((col) => (
-                            <th key={col}>{col}</th>
-                        ))}
-                    </tr>
-                </thead>
                 <tbody>
-                    {data.map((row, i) => (
-                        <tr key={i}>
-                            <td>{row.name ?? "-"}</td>
-                            <td>{row.equation ?? "-"}</td>
+                    {rows.map((row, i) => (
+                        <tr
+                            key={i}
+                            onMouseEnter={(e) =>
+                                (e.currentTarget.style.background = "#0d0d22")
+                            }
+                            onMouseLeave={(e) =>
+                                (e.currentTarget.style.background = "")
+                            }
+                        >
+                            <td style={{ color: "#888", width: "40%" }}>
+                                {row.name}
+                            </td>
+                            <td
+                                style={{
+                                    color: c,
+                                    fontFamily: "'Chakra Petch'",
+                                    fontWeight: 500,
+                                    letterSpacing: ".3px",
+                                }}
+                            >
+                                {row.equation}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -324,199 +445,80 @@ function PhyFormulaTable({ data }: { data: MathFormulae[] }) {
     );
 }
 
+// ── main export ────────────────────────────────────────────────────────────
 export default function MathTables() {
+    const grouped = groupBy(MATH_FORMULAE, "topic");
+
     return (
-        <div className="container">
-            <style>{`
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Chakra+Petch:wght@300;500;700&display=swap');
+        <div className="pt-wrap">
+            <a
+                href="/"
+                data-discover="true"
+                className="hover:text-primary transition-colors ml-[97%] mt-[2%]"
+                style={{
+                    position: "fixed",
+                    top: 16,
+                    right: 16,
+                    zIndex: 50,
+                    display: "inline-flex",
+                }}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    className="lucide lucide-house"
+                >
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+            </a>
+            <style>{SHARED_STYLE}</style>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+            <div style={{ marginBottom: 24, textAlign: "center" }}>
+                <h1
+                    style={{
+                        fontFamily: "'Chakra Petch'",
+                        fontWeight: 700,
+                        fontSize: 17,
+                        color: "#eee",
+                        letterSpacing: "2px",
+                        textTransform: "uppercase",
+                        marginBottom: 4,
+                    }}
+                >
+                    Mathematics — Formulae &amp; Constants
+                </h1>
+                <p
+                    style={{
+                        fontSize: 9,
+                        color: "#2e2e4a",
+                        letterSpacing: ".5px",
+                    }}
+                >
+                    Mathematics · hover rows to highlight
+                </p>
+            </div>
 
-.pt-wrap {
-  font-family: 'Space Mono', monospace;
-  background: #03030a;
-  min-height: 100vh;
-  color: #eee;
-  padding: 16px;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+            <ConstantsTable data={MATH_CONSTANTS} />
 
-.modal-bg {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, .75);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fi .18s ease;
-}
-
-.modal {
-  background: #090912;
-  border-radius: 14px;
-  padding: 28px 32px;
-  width: 360px;
-  max-width: 95vw;
-  position: relative;
-  animation: su .22s cubic-bezier(.22, .68, 0, 1.2);
-}
-
-@keyframes fi {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes su {
-  from { transform: translateY(18px) scale(.97); opacity: 0; }
-  to { transform: none; opacity: 1; }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: .6; }
-  50% { opacity: 1; }
-}
-
-.bar-track {
-  height: 4px;
-  background: #111128;
-  border-radius: 2px;
-  overflow: hidden;
-  margin-top: 3px;
-}
-
-.bar-fill {
-  height: 4px;
-  border-radius: 2px;
-  transition: width .7s cubic-bezier(.22, .68, 0, 1.2);
-}
-
-@keyframes pop {
-  from { opacity: 0; transform: scale(.7); }
-  to { opacity: 1; transform: none; }
-}
-
-/* Physics table styles - adapted from chem-table */
-.phy-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  font-family: 'Space Mono', monospace;
-}
-
-.phy-table th,
-.phy-table td {
-  padding: 6px 4px;
-  border-bottom: 1px solid #111;
-  font-size: 11px;
-  color: #bbb;
-}
-
-.phy-table th {
-  text-align: left;
-  border-bottom: 1px solid #222;
-  color: #888;
-  text-transform: uppercase;
-  font-size: 9px;
-}
-
-.phy-table th:first-child,
-.phy-table td:first-child {
-  width: 70%;
-}
-
-.phy-table th:last-child,
-.phy-table td:last-child {
-  width: 30%;
-  text-align: right;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap');
-
-.pt-wrap {
-  font-family: 'DM Mono', monospace;
-  background: #0c0c1a;
-  color: #eee;
-  padding: 20px;
-}
-
-.chem-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.chem-table th, .chem-table td {
-  padding: 6px 4px;
-  font-size: 9px;
-  text-align: left;
-  border-bottom: 1px solid #111;
-  color: #bbb;
-}
-
-.chem-table th {
-  color: #888;
-  text-transform: uppercase;
-  border-bottom: 1px solid #222;
-  font-weight: 500;
-}
-
-.modal-bg {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal {
-  background: #12122b;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 400px;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 40px #000;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  color: #888;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.bar-track {
-  height: 5px;
-  width: 100%;
-  background: #1a1a2e;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.bar-fill {
-  height: 100%;
-  background: #3bc9c9;
-  border-radius: 3px;
-  transition: width 0.3s ease;
-}
-            `}</style>
-
-            <PhyConstTable data={MATH_CONSTANTS} />
-            <PhyFormulaTable data={MATH_FORMULAE} />
+            <div className="data-section">
+                <div className="section-heading">Formulae by Topic</div>
+                {Object.entries(grouped).map(([topic, rows]) => (
+                    <FormulaeSection
+                        key={topic}
+                        topic={topic}
+                        rows={rows as MathFormula[]}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
