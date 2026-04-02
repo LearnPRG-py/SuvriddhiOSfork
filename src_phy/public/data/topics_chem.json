@@ -1,0 +1,134 @@
+[
+    {
+        "id": "physical_chemistry",
+        "title": "Physical Chemistry",
+        "items": [
+            {
+                "id": "states_of_matter",
+                "type": "lesson",
+                "title": "States of Matter",
+                "contentFile": "topics_chem/states_of_matter.html"
+            },
+            {
+                "id": "physical_chemical",
+                "type": "lesson",
+                "title": "Physical and Chemical Changes",
+                "contentFile": "topics_chem/physical_chemical.html"
+            }
+        ]
+    },
+    {
+        "id": "atomic_structure",
+        "title": "Atomic Structure",
+        "items": [
+            {
+                "id": "atomic_1",
+                "type": "lesson",
+                "title": "Introduction to Atomic Structure",
+                "contentFile": "topics_chem/atomic_1.html"
+            },
+            {
+                "id": "atomic_2",
+                "type": "lesson",
+                "title": "Atomic Structure Concepts",
+                "contentFile": "topics_chem/atomic_2.html"
+            },
+            {
+                "id": "oxidation_states",
+                "type": "lesson",
+                "title": "Oxidation States",
+                "contentFile": "topics_chem/oxidation_states.html"
+            }
+        ]
+    },
+    {
+        "id": "chemical_bonding",
+        "title": "Chemical Bonding",
+        "items": [
+            {
+                "id": "ionic",
+                "type": "lesson",
+                "title": "Ionic Bonding",
+                "contentFile": "topics_chem/ionic.html"
+            },
+            {
+                "id": "covalent",
+                "type": "lesson",
+                "title": "Covalent Bonding",
+                "contentFile": "topics_chem/covalent.html"
+            },
+            {
+                "id": "metallic",
+                "type": "lesson",
+                "title": "Metallic Bonding",
+                "contentFile": "topics_chem/metallic.html"
+            }
+        ]
+    },
+    {
+        "id": "stoichiometry",
+        "title": "Stoichiometry",
+        "items": [
+            {
+                "id": "mole",
+                "type": "lesson",
+                "title": "The Mole Concept",
+                "contentFile": "topics_chem/mole.html"
+            },
+            {
+                "id": "equations_and_ratios",
+                "type": "lesson",
+                "title": "Chemical Equations and Ratios",
+                "contentFile": "topics_chem/equations_and_ratios.html"
+            },
+            {
+                "id": "limiting_reagent",
+                "type": "lesson",
+                "title": "Limiting Reagents",
+                "contentFile": "topics_chem/limiting_reagent.html"
+            }
+        ]
+    },
+    {
+        "id": "acids_bases",
+        "title": "Acids and Bases",
+        "items": [
+            {
+                "id": "acids_and_bases1",
+                "type": "lesson",
+                "title": "Introduction to Acids and Bases",
+                "contentFile": "topics_chem/acids_and_bases1.html"
+            },
+            {
+                "id": "acids_and_bases2",
+                "type": "lesson",
+                "title": "Acids and Bases Reactions",
+                "contentFile": "topics_chem/acids_and_bases2.html"
+            },
+            {
+                "id": "ph",
+                "type": "lesson",
+                "title": "The pH Scale",
+                "contentFile": "topics_chem/ph.html"
+            }
+        ]
+    },
+    {
+        "id": "redox_electrochemistry",
+        "title": "Redox and Electrochemistry",
+        "items": [
+            {
+                "id": "redox_intro",
+                "type": "lesson",
+                "title": "Introduction to Redox Reactions",
+                "contentFile": "topics_chem/redox_intro.html"
+            },
+            {
+                "id": "electrolysis_and_electroplating",
+                "type": "lesson",
+                "title": "Electrolysis and Electroplating",
+                "contentFile": "topics_chem/electrolysis_and_electroplating.html"
+            }
+        ]
+    }
+]

@@ -18,6 +18,7 @@ export default function RecentActivity({
         Promise.all([
             fetch("/data/topics.json").then((r) => r.json()),
             fetch("/data/topics_math.json").then((r) => r.json()),
+            fetch("/data/topics_chem.json").then((r) => r.json()),
         ])
             .then(([physics, math]) => setTopics([...physics, ...math]))
             .catch(() => setTopics([]));
