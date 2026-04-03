@@ -1,23 +1,5 @@
 [
     {
-        "id": "physical_chemistry",
-        "title": "Physical Chemistry",
-        "items": [
-            {
-                "id": "states_of_matter",
-                "type": "lesson",
-                "title": "States of Matter",
-                "contentFile": "topics_chem/states_of_matter.html"
-            },
-            {
-                "id": "physical_chemical",
-                "type": "lesson",
-                "title": "Physical and Chemical Changes",
-                "contentFile": "topics_chem/physical_chemical.html"
-            }
-        ]
-    },
-    {
         "id": "atomic_structure",
         "title": "Atomic Structure",
         "items": [
@@ -128,6 +110,120 @@
                 "type": "lesson",
                 "title": "Electrolysis and Electroplating",
                 "contentFile": "topics_chem/electrolysis_and_electroplating.html"
+            }
+        ]
+    },
+    {
+        "id": "physical_chemistry",
+        "title": "Physical Chemistry",
+        "items": [
+            {
+                "id": "states_of_matter",
+                "type": "lesson",
+                "title": "States of Matter",
+                "contentFile": "topics_chem/states_of_matter.html"
+            },
+            {
+                "id": "physical_chemical",
+                "type": "lesson",
+                "title": "Physical and Chemical Changes",
+                "contentFile": "topics_chem/physical_chemical.html"
+            },
+            {
+                "id": "equilibrium",
+                "type": "lesson",
+                "title": "Chemical Equilibrium",
+                "contentFile": "topics_chem/equilibrium.html"
+            }
+        ]
+    },
+    {
+        "id": "chemical_kinetics",
+        "title": "Chemical Kinetics",
+        "items": [
+            {
+                "id": "kinetics_rates",
+                "type": "lesson",
+                "title": "Reaction Rates",
+                "contentFile": "topics_chem/kinetics_rates.html"
+            },
+            {
+                "id": "kinetics_factors",
+                "type": "lesson",
+                "title": "Factors Affecting Reaction Rates",
+                "contentFile": "topics_chem/kinetics_factors.html"
+            }
+        ]
+    },
+    {
+        "id": "organic_chemistry",
+        "title": "Organic Chemistry",
+        "items": [
+            {
+                "id": "organic_intro",
+                "type": "lesson",
+                "title": "Introduction to Organic Chemistry",
+                "contentFile": "topics_chem/organic_intro.html"
+            },
+            {
+                "id": "organic_functional_groups",
+                "type": "lesson",
+                "title": "Functional Groups",
+                "contentFile": "topics_chem/organic_functional_groups.html"
+            },
+            {
+                "id": "organic_alkanes",
+                "type": "lesson",
+                "title": "Alkanes",
+                "contentFile": "topics_chem/organic_alkanes.html"
+            },
+            {
+                "id": "organic_alkenes",
+                "type": "lesson",
+                "title": "Alkenes",
+                "contentFile": "topics_chem/organic_alkenes.html"
+            },
+            {
+                "id": "organic_alcohols",
+                "type": "lesson",
+                "title": "Alcohols",
+                "contentFile": "topics_chem/organic_alcohols.html"
+            },
+            {
+                "id": "organic_carboxylic",
+                "type": "lesson",
+                "title": "Carboxylic Acids",
+                "contentFile": "topics_chem/organic_carboxylic.html"
+            },
+            {
+                "id": "organic_esters",
+                "type": "lesson",
+                "title": "Esters",
+                "contentFile": "topics_chem/organic_esters.html"
+            }
+        ]
+    },
+    {
+        "id": "laboratory_techniques",
+        "title": "Laboratory Techniques",
+        "items": [
+            {
+                "id": "lab_separation",
+                "type": "lesson",
+                "title": "Separation Techniques",
+                "contentFile": "topics_chem/lab_separation.html"
+            },
+            {
+                "id": "lab_titration",
+                "type": "lesson",
+                "title": "Titration",
+                "contentFile": "topics_chem/lab_titration.html"
+            },
+            {
+                "id": "lab_thermochem",
+                "type": "lesson",
+                "title": "Thermochemistry Lab",
+                "contentFile": "topics_chem/lab_thermochem.html"
             }
         ]
     }
