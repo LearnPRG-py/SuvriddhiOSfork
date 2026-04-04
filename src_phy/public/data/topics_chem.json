@@ -14,12 +14,6 @@
                 "type": "lesson",
                 "title": "Atomic Structure Concepts",
                 "contentFile": "topics_chem/atomic_2.html"
-            },
-            {
-                "id": "oxidation_states",
-                "type": "lesson",
-                "title": "Oxidation States",
-                "contentFile": "topics_chem/oxidation_states.html"
             }
         ]
     },
@@ -110,6 +104,12 @@
                 "type": "lesson",
                 "title": "Electrolysis and Electroplating",
                 "contentFile": "topics_chem/electrolysis_and_electroplating.html"
+            },
+            {
+                "id": "oxidation_states",
+                "type": "lesson",
+                "title": "Oxidation States",
+                "contentFile": "topics_chem/oxidation_states.html"
             }
         ]
     },
