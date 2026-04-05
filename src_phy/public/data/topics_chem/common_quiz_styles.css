@@ -24,6 +24,7 @@ body {
 }
 
 .option {
+    border-style: solid;
     transition:
         background-color 0.4s ease,
         border-color 0.4s ease;
@@ -160,9 +161,10 @@ body {
 }
 
 #next {
+    border-style: solid;
     margin-top: 5vh;
     --main_color: rgb(18, 18, 18);
-    border-color: var(--main_color);
+    border-color: #333;
     border-width: 2px;
     background-color: color-mix(in srgb, var(--main_color), transparent 80%);
 }
