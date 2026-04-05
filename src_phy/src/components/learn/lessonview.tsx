@@ -1,8 +1,6 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import type { LessonItem } from "../../types/learningitems";
 import { Check } from "lucide-react";
-import PDFViewer from "../common/PDFViewer";
-import { createRoot } from "react-dom/client";
 import { Unity, useUnityContext } from "react-unity-webgl";
 import { useStore } from "../../store/useStore";
 
