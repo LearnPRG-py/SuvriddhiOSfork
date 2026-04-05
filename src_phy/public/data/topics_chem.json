@@ -17,7 +17,7 @@
             },
             {
                 "id": "atomic_structure_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Atomic Structure Quiz",
                 "contentFile": "topics_chem/atomic_structure_quiz.html"
             }
@@ -47,7 +47,7 @@
             },
             {
                 "id": "chemical_bonding_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Chemical Bonding Quiz",
                 "contentFile": "topics_chem/chemical_bonding_quiz.html"
             }
@@ -77,7 +77,7 @@
             },
             {
                 "id": "stoichiometry_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Stoichiometry Quiz",
                 "contentFile": "topics_chem/stoichiometry_quiz.html"
             }
@@ -107,7 +107,7 @@
             },
             {
                 "id": "acids_and_bases_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Acids and Bases Quiz",
                 "contentFile": "topics_chem/acids_and_bases_quiz.html"
             }
@@ -137,7 +137,7 @@
             },
             {
                 "id": "redox_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Redox and Electrochemistry Quiz",
                 "contentFile": "topics_chem/redox_quiz.html"
             }
@@ -167,7 +167,7 @@
             },
             {
                 "id": "physical_chem_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Physical Chemistry Quiz",
                 "contentFile": "topics_chem/physical_chem_quiz.html"
             }
@@ -191,7 +191,7 @@
             },
             {
                 "id": "kinetics_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Chemical Kinetics Quiz",
                 "contentFile": "topics_chem/kinetics_quiz.html"
             }
@@ -245,7 +245,7 @@
             },
             {
                 "id": "organic_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Organic Chemistry Quiz",
                 "contentFile": "topics_chem/organic_quiz.html"
             }
@@ -275,7 +275,7 @@
             },
             {
                 "id": "lab_techniques_quiz",
-                "type": "quiz",
+                "type": "lesson",
                 "title": "Laboratory Techniques Quiz",
                 "contentFile": "topics_chem/lab_techniques_quiz.html"
             }

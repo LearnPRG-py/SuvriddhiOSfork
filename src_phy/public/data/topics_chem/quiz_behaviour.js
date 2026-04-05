@@ -4,7 +4,7 @@ let questions = [];
 let questionnumber = 0;
 let correctanswer = 0;
 
-fetch("./questions.json")
+fetch("/data/topics_chem/questions.json")
     .then((res) => res.json())
     .then((data) => {
         questions = data[pageTitle];

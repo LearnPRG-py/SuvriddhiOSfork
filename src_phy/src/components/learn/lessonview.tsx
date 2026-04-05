@@ -177,11 +177,13 @@ export default function LessonView({ item, onMarkComplete }: LessonViewProps) {
             ) : isMathUnity ? (
                 <UnityMathLesson key={item.id} levelId={item.id} />
             ) : (
-                <div
-                    ref={contentRef}
-                    className="max-w-none"
-                    dangerouslySetInnerHTML={{
-                        __html: html ?? "<p>Loading...</p>",
+                <iframe
+                    src={`/data/${item.contentFile}`}
+                    style={{
+                        border: "none",
+                        width: "100%",
+                        height: "90vh",
+                        display: "block",
                     }}
                 />
             )}
