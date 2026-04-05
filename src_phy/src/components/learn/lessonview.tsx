@@ -131,41 +131,11 @@ function UnityMathLesson({ levelId }: { levelId: string }) {
 
 export default function LessonView({ item, onMarkComplete }: LessonViewProps) {
     const { subject } = useStore();
-    const [html, setHtml] = useState<string | null>(null);
-    const contentRef = useRef<HTMLDivElement>(null);
 
     const isMathUnity =
         subject === "Math" && item.contentFile === "topics_math/index.html";
     const isPhysicsUnity =
         subject === "Physics" && isUnityLesson(item.contentFile);
-
-    useEffect(() => {
-        if (isMathUnity || isPhysicsUnity) return;
-
-        fetch(`/data/${item.contentFile}`)
-            .then((r) => r.text())
-            .then((t) => {
-                setHtml(t);
-                setTimeout(() => {
-                    if (contentRef.current) {
-                        const pdfElements =
-                            contentRef.current.getElementsByClassName(
-                                "pdf-viewer",
-                            );
-                        Array.from(pdfElements).forEach((elem) => {
-                            const pdfPath = elem.getAttribute("data-pdf");
-                            if (pdfPath) {
-                                const container = document.createElement("div");
-                                elem.parentNode?.replaceChild(container, elem);
-                                const root = createRoot(container);
-                                root.render(<PDFViewer file={pdfPath} />);
-                            }
-                        });
-                    }
-                }, 0);
-            })
-            .catch(() => setHtml("<p>Unable to load content.</p>"));
-    }, [item.contentFile, isMathUnity, isPhysicsUnity]);
 
     return (
         <div className="grow p-6">
