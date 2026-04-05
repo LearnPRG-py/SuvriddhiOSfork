@@ -1614,5 +1614,167 @@
             "answer": 2,
             "explanation": "Yeast is killed by ethanol concentrations above ~15%. This limits fermentation to ~15% maximum alcohol. Industrial distillation is needed to concentrate further (e.g. spirits at 40%). The Haber-like compromise: enzyme activity vs product inhibition."
         }
+    ],
+    "Quiz on Laboratory Techniques": [
+        {
+            "question": "Which physical property is exploited to separate substances using distillation?",
+            "options": [
+                "Particle size",
+                "Solubility in water",
+                "Boiling point",
+                "Volatility"
+            ],
+            "answer": 2,
+            "explanation": "Distillation relies on differences in boiling point. The component with the lower boiling point evaporates first, is condensed, and then collected."
+        },
+        {
+            "question": "What does the Rf value in chromatography represent, and what is its maximum possible value?",
+            "options": [
+                "The speed of the solvent; maximum value is 10",
+                "The ratio of distance traveled by the spot to the solvent front; maximum value is 1",
+                "The thickness of the stationary phase; maximum value is 0.5",
+                "The time taken for elution; maximum value is 100"
+            ],
+            "answer": 1,
+            "explanation": "The Retention factor (Rf) is the distance traveled by the spot divided by the distance traveled by the solvent front. Since the spot cannot travel further than the solvent, the value is always between 0 and 1."
+        },
+        {
+            "question": "Which type of chromatography uses an inert gas as the mobile phase?",
+            "options": [
+                "Thin-layer chromatography (TLC)",
+                "High-performance liquid chromatography (HPLC)",
+                "Gas chromatography (GC)",
+                "Paper chromatography"
+            ],
+            "answer": 2,
+            "explanation": "Gas chromatography (GC) uses an inert gas as the mobile phase to carry vaporized organic compounds through a column."
+        },
+        {
+            "question": "In crystallization, why is slow cooling preferred over fast cooling?",
+            "options": [
+                "It prevents the solvent from evaporating too quickly",
+                "It results in larger and purer crystals",
+                "It ensures all soluble impurities are trapped inside the crystals",
+                "It increases the solubility of the compound"
+            ],
+            "answer": 1,
+            "explanation": "Slow cooling allows the molecules to arrange themselves into a regular lattice, resulting in larger, purer crystals. Fast cooling often traps impurities and results in small crystals."
+        },
+        {
+            "question": "What is the primary goal of Gravimetric Analysis?",
+            "options": [
+                "To determine the boiling point of a liquid",
+                "To measure the pH of a solution during titration",
+                "To determine the amount of a substance by weighing an insoluble product",
+                "To identify the components of a dye using light"
+            ],
+            "answer": 2,
+            "explanation": "Gravimetric analysis involves converting a substance into an insoluble precipitate, which is then filtered, dried, and weighed precisely to calculate the original amount of the substance."
+        },
+        {
+            "question": "In a calorimetry experiment, if the temperature of the surroundings increases, the reaction is classified as:",
+            "options": [
+                "Endothermic with a positive ΔH",
+                "Exothermic with a positive ΔH",
+                "Endothermic with a negative ΔH",
+                "Exothermic with a negative ΔH"
+            ],
+            "answer": 3,
+            "explanation": "Exothermic reactions release heat to the surroundings, causing the temperature to rise. By convention, because the system loses energy, ΔH is negative."
+        },
+        {
+            "question": "Using the formula q = mcΔT, what does 'c' represent when calculating heat energy transferred in an aqueous solution?",
+            "options": [
+                "Concentration of the reactant",
+                "The speed of light",
+                "Specific heat capacity (usually of water, 4.18 J g⁻¹ K⁻¹)",
+                "The combustion constant"
+            ],
+            "answer": 2,
+            "explanation": "In calorimetry, 'c' is the specific heat capacity, which is the amount of energy required to raise the temperature of 1 gram of a substance by 1 degree Celsius (or Kelvin)."
+        },
+        {
+            "question": "According to Hess's Law, the enthalpy change of a reaction depends on:",
+            "options": [
+                "The number of steps in the mechanism",
+                "The route taken to reach the products",
+                "Only the initial and final states",
+                "The speed at which the reaction occurs"
+            ],
+            "answer": 2,
+            "explanation": "Hess's Law states that the total enthalpy change is independent of the route taken; it is a state function that only depends on the start and end points."
+        },
+        {
+            "question": "Why are enthalpy calculations based on 'Average Bond Enthalpies' often less accurate than those from Hess's Law cycles?",
+            "options": [
+                "Bond enthalpies are only measured at absolute zero",
+                "Bond enthalpies are average values across different compounds",
+                "Hess's Law ignores the conservation of energy",
+                "Bond enthalpies only apply to solids"
+            ],
+            "answer": 1,
+            "explanation": "Average bond enthalpies are generalized values. The actual energy of a specific bond (like C-H) varies slightly depending on the specific molecule it is in."
+        },
+        {
+            "question": "What is the 'equivalence point' in a titration?",
+            "options": [
+                "The moment the indicator changes color",
+                "When the volume in the burette equals the volume in the flask",
+                "The point where stoichiometrically equivalent amounts of reactants have reacted",
+                "When the pH of the solution reaches exactly 7.0"
+            ],
+            "answer": 2,
+            "explanation": "The equivalence point is the theoretical point where the moles of titrant and moles of analyte are in the exact ratio defined by the balanced chemical equation."
+        },
+        {
+            "question": "Which indicator is most suitable for a titration between a Strong Acid and a Weak Base?",
+            "options": [
+                "Phenolphthalein",
+                "Methyl orange",
+                "Universal indicator",
+                "Starch solution"
+            ],
+            "answer": 1,
+            "explanation": "For a strong acid + weak base titration, the equivalence point occurs at an acidic pH (~5). Methyl orange is suitable because its color change interval (3.1–4.4) is in the acidic range."
+        },
+        {
+            "question": "Why should a burette be rinsed with the standard solution before starting a titration?",
+            "options": [
+                "To ensure the burette is clean of any dust",
+                "To prevent the standard solution from being diluted by residual water",
+                "To lubricate the tap of the burette",
+                "To make the glass more transparent"
+            ],
+            "answer": 1,
+            "explanation": "If the burette is rinsed only with water, droplets remaining on the inside will dilute the standard solution, leading to an inaccurately high titre reading."
+        },
+        {
+            "question": "What are 'concordant results' in the context of titration?",
+            "options": [
+                "Results that match the literature value exactly",
+                "Titre volumes that are within 0.10 cm³ of each other",
+                "Results obtained by two different students",
+                "Calculations that have been checked for errors"
+            ],
+            "answer": 1,
+            "explanation": "Concordant results are multiple titration runs where the volumes are very close (typically within 0.10 cm³), ensuring the precision and reproducibility of the data."
+        },
+        {
+            "question": "When is a 'Back Titration' typically employed?",
+            "options": [
+                "When the reaction is too fast to measure",
+                "When the analyte is a highly concentrated strong acid",
+                "When the substance does not react directly or cleanly with a standard solution",
+                "When there is no indicator available"
+            ],
+            "answer": 2,
+            "explanation": "Back titration is used for substances that are insoluble (like limestone) or react too slowly. An excess of reagent is added, and the remaining unreacted reagent is then titrated."
+        },
+        {
+            "question": "In the titration of H₂SO₄ with NaOH, what is the mole ratio of Acid to Base?",
+            "options": ["1:1", "2:1", "1:2", "3:1"],
+            "answer": 2,
+            "explanation": "The balanced equation is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. Therefore, 1 mole of sulfuric acid reacts with 2 moles of sodium hydroxide (1:2 ratio)."
+        }
     ]
 }

@@ -14,6 +14,12 @@
                 "type": "lesson",
                 "title": "Atomic Structure Concepts",
                 "contentFile": "topics_chem/atomic_2.html"
+            },
+            {
+                "id": "atomic_structure_quiz",
+                "type": "quiz",
+                "title": "Atomic Structure Quiz",
+                "contentFile": "topics_chem/atomic_structure_quiz.html"
             }
         ]
     },
@@ -38,6 +44,12 @@
                 "type": "lesson",
                 "title": "Metallic Bonding",
                 "contentFile": "topics_chem/metallic.html"
+            },
+            {
+                "id": "chemical_bonding_quiz",
+                "type": "quiz",
+                "title": "Chemical Bonding Quiz",
+                "contentFile": "topics_chem/chemical_bonding_quiz.html"
             }
         ]
     },
@@ -62,6 +74,12 @@
                 "type": "lesson",
                 "title": "Limiting Reagents",
                 "contentFile": "topics_chem/limiting_reagent.html"
+            },
+            {
+                "id": "stoichiometry_quiz",
+                "type": "quiz",
+                "title": "Stoichiometry Quiz",
+                "contentFile": "topics_chem/stoichiometry_quiz.html"
             }
         ]
     },
@@ -86,6 +104,12 @@
                 "type": "lesson",
                 "title": "The pH Scale",
                 "contentFile": "topics_chem/ph.html"
+            },
+            {
+                "id": "acids_and_bases_quiz",
+                "type": "quiz",
+                "title": "Acids and Bases Quiz",
+                "contentFile": "topics_chem/acids_and_bases_quiz.html"
             }
         ]
     },
@@ -110,6 +134,12 @@
                 "type": "lesson",
                 "title": "Oxidation States",
                 "contentFile": "topics_chem/oxidation_states.html"
+            },
+            {
+                "id": "redox_quiz",
+                "type": "quiz",
+                "title": "Redox and Electrochemistry Quiz",
+                "contentFile": "topics_chem/redox_quiz.html"
             }
         ]
     },
@@ -134,6 +164,12 @@
                 "type": "lesson",
                 "title": "Chemical Equilibrium",
                 "contentFile": "topics_chem/equilibrium.html"
+            },
+            {
+                "id": "physical_chem_quiz",
+                "type": "quiz",
+                "title": "Physical Chemistry Quiz",
+                "contentFile": "topics_chem/physical_chem_quiz.html"
             }
         ]
     },
@@ -152,6 +188,12 @@
                 "type": "lesson",
                 "title": "Factors Affecting Reaction Rates",
                 "contentFile": "topics_chem/kinetics_factors.html"
+            },
+            {
+                "id": "kinetics_quiz",
+                "type": "quiz",
+                "title": "Chemical Kinetics Quiz",
+                "contentFile": "topics_chem/kinetics_quiz.html"
             }
         ]
     },
@@ -200,6 +242,12 @@
                 "type": "lesson",
                 "title": "Esters",
                 "contentFile": "topics_chem/organic_esters.html"
+            },
+            {
+                "id": "organic_quiz",
+                "type": "quiz",
+                "title": "Organic Chemistry Quiz",
+                "contentFile": "topics_chem/organic_quiz.html"
             }
         ]
     },
@@ -224,6 +272,12 @@
                 "type": "lesson",
                 "title": "Thermochemistry Lab",
                 "contentFile": "topics_chem/lab_thermochem.html"
+            },
+            {
+                "id": "lab_techniques_quiz",
+                "type": "quiz",
+                "title": "Laboratory Techniques Quiz",
+                "contentFile": "topics_chem/lab_techniques_quiz.html"
             }
         ]
     }
