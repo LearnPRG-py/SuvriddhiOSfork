@@ -1152,5 +1152,467 @@
             "answer": 2,
             "explanation": "Le Chatelier predicts lower temperature → higher NH₃ yield (exothermic reaction). But lower temperature also means slower rate. ~450°C is a compromise: acceptable yield (~15%) at a practical rate. Ammonia is also continuously removed to shift equilibrium right."
         }
+    ],
+
+    "Quiz on Chemical Kinetics": [
+        {
+            "question": "What are the two conditions that must BOTH be met for a collision to be effective?",
+            "options": [
+                "Correct temperature and correct pressure",
+                "Sufficient energy (≥ activation energy) AND correct orientation",
+                "High concentration and high temperature",
+                "Particles must be the same size and charge"
+            ],
+            "answer": 1,
+            "explanation": "For a reaction to occur, colliding particles must have combined kinetic energy ≥ Eₐ (activation energy) AND be correctly oriented so reactive parts face each other. Missing either condition means no reaction."
+        },
+        {
+            "question": "What is activation energy?",
+            "options": [
+                "The energy released when products form",
+                "The minimum energy required for a collision to result in a reaction",
+                "The total energy of all particles in a sample",
+                "The energy needed to break all bonds in the reactants"
+            ],
+            "answer": 1,
+            "explanation": "Activation energy (Eₐ) is the minimum energy threshold that colliding particles must possess for the reaction to occur. Even if particles collide, they bounce off if their combined energy is below Eₐ."
+        },
+        {
+            "question": "On a Maxwell-Boltzmann distribution curve, what does the area to the right of Eₐ represent?",
+            "options": [
+                "The total number of particles",
+                "The average kinetic energy",
+                "The fraction of particles with enough energy to react",
+                "The activation energy of the reaction"
+            ],
+            "answer": 2,
+            "explanation": "The area under the curve to the right of Eₐ represents the proportion of particles with E ≥ Eₐ — the ones that can actually react when they collide with the right orientation. Increasing temperature increases this area dramatically."
+        },
+        {
+            "question": "A 10°C rise in temperature roughly doubles the rate of many reactions. Which Maxwell-Boltzmann effect mainly explains this?",
+            "options": [
+                "Particles move faster so collide more frequently",
+                "The fraction of particles exceeding Eₐ increases dramatically",
+                "Activation energy decreases at higher temperature",
+                "Particles become larger at higher temperature"
+            ],
+            "answer": 1,
+            "explanation": "While higher temperature does increase collision frequency slightly, the dominant effect is that many more particles now have energy ≥ Eₐ. The proportion of effective collisions increases exponentially with temperature (Arrhenius relationship)."
+        },
+        {
+            "question": "Increasing the concentration of a reactant increases rate because:",
+            "options": [
+                "Each particle has more energy",
+                "Activation energy decreases",
+                "There are more particles per unit volume, so collisions are more frequent",
+                "The proportion of effective collisions increases"
+            ],
+            "answer": 2,
+            "explanation": "Concentration increases collision frequency — more particles in the same space means more collisions per second. The energy of individual particles (and therefore the proportion of effective collisions) is unchanged. Only frequency changes."
+        },
+        {
+            "question": "Why does powdering a solid reactant increase the reaction rate?",
+            "options": [
+                "Powder has higher concentration",
+                "Smaller particles have more surface area exposed, giving more collision sites",
+                "Powder dissolves faster, changing its state",
+                "Powder has lower activation energy"
+            ],
+            "answer": 1,
+            "explanation": "Reactions between a solid and a liquid/gas occur only at the solid's surface. Smaller particles = more surface area exposed = more simultaneous collision sites = faster rate. Total yield is unchanged — just how quickly it's reached."
+        },
+        {
+            "question": "How does a catalyst increase reaction rate?",
+            "options": [
+                "It increases the temperature of the reaction",
+                "It provides an alternative pathway with lower activation energy",
+                "It increases the concentration of reactants",
+                "It is consumed in the reaction, releasing energy"
+            ],
+            "answer": 1,
+            "explanation": "A catalyst provides an alternative reaction mechanism with a lower Eₐ. More particles exceed this lower threshold → more effective collisions → faster rate. The catalyst is not consumed and ΔH of the reaction is unchanged."
+        },
+        {
+            "question": "Which statement about a catalyst is correct?",
+            "options": [
+                "It is permanently consumed in the reaction",
+                "It changes the enthalpy change (ΔH) of the reaction",
+                "It lowers activation energy and is regenerated at the end",
+                "It only works at high temperatures"
+            ],
+            "answer": 2,
+            "explanation": "Catalysts are not consumed — they participate in the reaction mechanism but are regenerated at the end. They lower Eₐ but don't change ΔH (the energy difference between reactants and products stays the same)."
+        },
+        {
+            "question": "On an energy profile diagram, what is the effect of adding a catalyst?",
+            "options": [
+                "The reactant energy level rises",
+                "The product energy level falls",
+                "The peak of the curve (transition state) is lower — Eₐ decreases",
+                "The curve shifts to the right"
+            ],
+            "answer": 2,
+            "explanation": "A catalyst lowers the activation energy — the peak of the energy profile curve drops. The reactant and product energy levels stay the same (ΔH unchanged). The alternative pathway has a lower energy barrier."
+        },
+        {
+            "question": "Iron is the catalyst in the Haber process. What type of catalyst is this?",
+            "options": [
+                "Homogeneous — same phase as reactants",
+                "Heterogeneous — different phase from reactants",
+                "Enzymatic — biological catalyst",
+                "Autocatalytic — product acts as catalyst"
+            ],
+            "answer": 1,
+            "explanation": "The Haber process uses solid iron catalyst with gaseous N₂ and H₂ reactants. Solid catalyst + gas reactants = different phases = heterogeneous catalysis. The reaction occurs at the solid surface, which is why surface area matters."
+        },
+        {
+            "question": "In the thiosulfate clock reaction, rate is measured as 1/time. Why?",
+            "options": [
+                "Because time is proportional to concentration",
+                "Because 1/time is proportional to rate when the same amount of product forms in each experiment",
+                "Because time squared gives the rate constant",
+                "Because 1/time cancels the units of concentration"
+            ],
+            "answer": 1,
+            "explanation": "The experiment times how long until the same visual endpoint (cross disappears) is reached — meaning the same amount of S has formed each time. Since the same product amount is produced, less time = faster rate. Therefore rate ∝ 1/time."
+        },
+        {
+            "question": "Why do enzymes stop working above ~40°C?",
+            "options": [
+                "The substrate concentration falls at high temperature",
+                "Activation energy increases at high temperature",
+                "The enzyme protein denatures — it unfolds and loses its active site shape",
+                "The reaction becomes endothermic at high temperature"
+            ],
+            "answer": 2,
+            "explanation": "Enzymes are proteins with a specific 3D active site shape. Above ~40°C, thermal energy breaks the hydrogen bonds holding the protein in shape — it denatures (unfolds). The active site is lost and the enzyme can no longer bind its substrate."
+        },
+        {
+            "question": "Which factor does NOT increase the rate of a reaction between marble chips and hydrochloric acid?",
+            "options": [
+                "Increasing HCl concentration",
+                "Using powdered marble instead of chips",
+                "Increasing temperature",
+                "Adding more marble chips after the reaction has finished"
+            ],
+            "answer": 3,
+            "explanation": "Adding more marble after the reaction is complete doesn't increase rate — HCl has been consumed (it's the limiting reagent or reaction is done). The other three (concentration, surface area, temperature) all increase collision frequency or proportion of effective collisions."
+        }
+    ],
+
+    "Quiz on Organic Chemistry": [
+        {
+            "question": "Why can carbon form so many compounds?",
+            "options": [
+                "Carbon is the lightest element",
+                "Carbon has 4 valence electrons, forms 4 bonds, can bond to itself (catenation), and form chains, branches, and rings",
+                "Carbon is the most abundant element on Earth",
+                "Carbon has the highest electronegativity"
+            ],
+            "answer": 1,
+            "explanation": "Carbon's uniqueness comes from: 4 valence electrons (4 covalent bonds), catenation (C-C bonds of any length), ability to form single/double/triple bonds, and ring structures. Together these give over 10 million organic compounds."
+        },
+        {
+            "question": "What is a functional group?",
+            "options": [
+                "The longest carbon chain in a molecule",
+                "A specific atom or group of atoms that determines a molecule's chemical reactivity",
+                "Any group of atoms containing oxygen",
+                "The carbon backbone of an organic molecule"
+            ],
+            "answer": 1,
+            "explanation": "A functional group is a specific atom or arrangement of atoms that reacts in a characteristic way regardless of chain length. The same functional group gives the same type of reaction — this is the key to predicting organic reactivity."
+        },
+        {
+            "question": "What is the general formula for alkanes?",
+            "options": ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙHₙ"],
+            "answer": 1,
+            "explanation": "Alkanes: CₙH₂ₙ₊₂. They are saturated hydrocarbons — every carbon has the maximum possible hydrogen atoms. Methane: CH₄, Ethane: C₂H₆, Propane: C₃H₈, Butane: C₄H₁₀."
+        },
+        {
+            "question": "What does 'saturated' mean in organic chemistry?",
+            "options": [
+                "The compound contains only one type of atom",
+                "Every carbon has the maximum number of hydrogen atoms — only single C-C bonds",
+                "The compound is dissolved in water",
+                "The compound has reacted completely"
+            ],
+            "answer": 1,
+            "explanation": "Saturated means every carbon is bonded to the maximum possible hydrogen atoms — achieved by having only single C-C bonds. No double or triple bonds exist. Alkanes are saturated. Alkenes (with C=C) are unsaturated."
+        },
+        {
+            "question": "Which alkane has the formula C₅H₁₂?",
+            "options": ["Butane", "Pentane", "Hexane", "Propane"],
+            "answer": 1,
+            "explanation": "Using CₙH₂ₙ₊₂: n=5 gives C₅H₁₂. Pentane (pent- = 5). The naming prefix sequence: meth(1), eth(2), prop(3), but(4), pent(5), hex(6), hept(7), oct(8)."
+        },
+        {
+            "question": "What is the product of COMPLETE combustion of any alkane?",
+            "options": ["CO and H₂O", "C and H₂O", "CO₂ and H₂O", "CO₂ and H₂"],
+            "answer": 2,
+            "explanation": "Complete combustion (excess O₂): all carbon → CO₂, all hydrogen → H₂O. Example: CH₄ + 2O₂ → CO₂ + 2H₂O. Incomplete combustion (limited O₂) produces toxic CO and/or soot (C)."
+        },
+        {
+            "question": "Why is carbon monoxide (CO) from incomplete combustion dangerous?",
+            "options": [
+                "It is corrosive to metals",
+                "It reacts with water to form acid rain",
+                "It binds to haemoglobin ~200× more strongly than O₂, preventing oxygen transport",
+                "It is highly explosive"
+            ],
+            "answer": 2,
+            "explanation": "CO binds irreversibly to haemoglobin (the red blood cell oxygen carrier) much more strongly than O₂. This prevents oxygen transport to cells, causing suffocation at the cellular level. Even small concentrations are lethal."
+        },
+        {
+            "question": "n-Butane and methylpropane both have formula C₄H₁₀. What are they called?",
+            "options": ["Isotopes", "Isomers", "Homologs", "Polymers"],
+            "answer": 1,
+            "explanation": "Structural isomers — same molecular formula (C₄H₁₀) but different structural arrangement. n-Butane is straight chain; methylpropane is branched. They have different boiling points: n-butane −1°C, methylpropane −12°C."
+        },
+        {
+            "question": "What is the general formula for alkenes?",
+            "options": ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₁"],
+            "answer": 1,
+            "explanation": "Alkenes: CₙH₂ₙ. They have one C=C double bond, which 'uses up' two hydrogens compared to alkanes. Ethene: C₂H₄, Propene: C₃H₆, But-1-ene and but-2-ene: both C₄H₈."
+        },
+        {
+            "question": "How do you test for the presence of a C=C double bond?",
+            "options": [
+                "Add limewater — turns milky if C=C present",
+                "Add bromine water — decolorizes if C=C present",
+                "Add universal indicator — turns red if C=C present",
+                "Add sodium — fizzes if C=C present"
+            ],
+            "answer": 1,
+            "explanation": "Bromine water (orange/brown) decolorizes (turns colourless) when added to an alkene — Br₂ adds across the C=C double bond. Alkanes don't react with Br₂ at room temperature, so no colour change occurs with them."
+        },
+        {
+            "question": "What type of reaction do alkenes undergo that alkanes do not?",
+            "options": [
+                "Combustion",
+                "Substitution",
+                "Addition",
+                "Decomposition"
+            ],
+            "answer": 2,
+            "explanation": "Alkenes undergo addition reactions — atoms add across the C=C double bond, breaking the π bond. Alkanes only react by substitution (with halogens under UV) or combustion. The reactive π bond is the key difference."
+        },
+        {
+            "question": "What are the conditions for the hydrogenation of ethene?",
+            "options": [
+                "Concentrated H₂SO₄, room temperature",
+                "Ni catalyst, ~150°C",
+                "Sunlight, room temperature",
+                "Fe catalyst, 450°C, 200 atm"
+            ],
+            "answer": 1,
+            "explanation": "Ethene + H₂ → ethane. Conditions: Ni catalyst, ~150°C. This addition reaction is used industrially to harden vegetable oils (margarine production). It has 100% atom economy — all atoms end up in the product."
+        },
+        {
+            "question": "What is the industrial method for making ethanol from ethene?",
+            "options": [
+                "Fermentation of glucose using yeast",
+                "Hydration: CH₂=CH₂ + H₂O → C₂H₅OH, using H₃PO₄ catalyst",
+                "Oxidation of methane",
+                "Reduction of ethanoic acid"
+            ],
+            "answer": 1,
+            "explanation": "Industrial hydration: C₂H₄ + H₂O → C₂H₅OH. Conditions: H₃PO₄ catalyst, 300°C, 60 atm (steam). This is fast, continuous, and gives high purity product. It uses ethene from crude oil cracking (non-renewable)."
+        },
+        {
+            "question": "What is the monomer for poly(ethene)?",
+            "options": [
+                "Ethane (C₂H₆)",
+                "Ethyne (C₂H₂)",
+                "Ethene (C₂H₄)",
+                "Methane (CH₄)"
+            ],
+            "answer": 2,
+            "explanation": "Poly(ethene) is made from ethene monomers: n(CH₂=CH₂) → -(CH₂-CH₂)ₙ-. The double bond opens during addition polymerization, linking monomers. No atoms are lost — 100% atom economy."
+        },
+        {
+            "question": "What is the functional group in an alcohol?",
+            "options": ["–COOH", "–NH₂", "–OH", "–COO–"],
+            "answer": 2,
+            "explanation": "Alcohols contain the hydroxyl group (–OH) bonded to a carbon atom. The –OH group is polar, forms hydrogen bonds, and is responsible for alcohol's high boiling point and water miscibility."
+        },
+        {
+            "question": "What happens when ethanol is oxidized by acidified K₂Cr₂O₇?",
+            "options": [
+                "Ethanol → ethene + water",
+                "Ethanol → ethanal (aldehyde), then → ethanoic acid (carboxylic acid)",
+                "Ethanol → ethane + CO₂",
+                "Ethanol → methanol + CO₂"
+            ],
+            "answer": 1,
+            "explanation": "Primary alcohols are oxidized in two steps: ethanol → ethanal (CH₃CHO, an aldehyde) → ethanoic acid (CH₃COOH). The orange K₂Cr₂O₇ turns green as Cr is reduced. Distilling quickly gives the aldehyde; refluxing gives the acid."
+        },
+        {
+            "question": "What type of alcohol CANNOT be oxidized by acidified K₂Cr₂O₇?",
+            "options": [
+                "Primary",
+                "Secondary",
+                "Tertiary",
+                "All alcohols can be oxidized"
+            ],
+            "answer": 2,
+            "explanation": "Tertiary alcohols cannot be oxidized — there is no hydrogen atom on the carbon bearing the –OH group. Primary alcohols → aldehydes → carboxylic acids. Secondary alcohols → ketones (no further oxidation). Tertiary → no reaction with K₂Cr₂O₇."
+        },
+        {
+            "question": "What is the dehydration product when ethanol is heated with concentrated H₂SO₄?",
+            "options": ["Ethane", "Ethanoic acid", "Ethene", "Diethyl ether"],
+            "answer": 2,
+            "explanation": "Dehydration removes water: C₂H₅OH → CH₂=CH₂ + H₂O. The –OH and a neighbouring H are eliminated. This is how ethene is produced from bio-ethanol. Conditions: conc. H₂SO₄ or Al₂O₃ catalyst, high temperature."
+        },
+        {
+            "question": "What are the two methods of producing ethanol and how do they differ?",
+            "options": [
+                "Both use yeast; one is faster",
+                "Fermentation (renewable, slow, batch, ~15% max) vs hydration of ethene (non-renewable, fast, continuous, high purity)",
+                "Both use catalysts; one is cheaper",
+                "Both use steam; one requires higher pressure"
+            ],
+            "answer": 1,
+            "explanation": "Fermentation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ (yeast, ~35°C, renewable, batch, max ~15% alcohol). Hydration: C₂H₄ + H₂O → C₂H₅OH (H₃PO₄, 300°C, 60 atm, non-renewable crude oil, continuous, high purity)."
+        },
+        {
+            "question": "What functional group is present in carboxylic acids?",
+            "options": ["–OH only", "–COO–", "–COOH (carboxyl)", "–CO–"],
+            "answer": 2,
+            "explanation": "Carboxylic acids contain the –COOH (carboxyl) group — a carbonyl (C=O) and hydroxyl (–OH) on the same carbon. The C=O withdraws electron density, weakening the O–H bond and making carboxylic acids acidic (though weak)."
+        },
+        {
+            "question": "Ethanoic acid has a pH of ~2.9 at 0.1 mol/dm³. Why is this higher than HCl at the same concentration (pH=1)?",
+            "options": [
+                "Ethanoic acid has a larger molar mass",
+                "Ethanoic acid is a weak acid — only about 1% ionizes in water",
+                "Ethanoic acid contains more atoms per molecule",
+                "HCl reacts with the container"
+            ],
+            "answer": 1,
+            "explanation": "Ethanoic acid is a weak acid: CH₃COOH ⇌ CH₃COO⁻ + H⁺. Only ~1% ionizes, producing far fewer H⁺ ions than HCl (which is ~100% ionized) at the same concentration. Fewer H⁺ → higher pH."
+        },
+        {
+            "question": "Why are carboxylic acids more acidic than alcohols, even though both contain –OH?",
+            "options": [
+                "Carboxylic acids have longer carbon chains",
+                "The adjacent C=O group withdraws electron density from the O-H bond, making H easier to release; the carboxylate anion is also resonance-stabilized",
+                "Carboxylic acids contain more oxygen atoms",
+                "Alcohols have stronger O-H bonds due to different hybridization"
+            ],
+            "answer": 1,
+            "explanation": "In –COOH, the C=O pulls electron density away from the O–H bond, weakening it and making H⁺ easier to release. The resulting –COO⁻ is stabilized by resonance (negative charge delocalized over both oxygens). Alcohols have none of these stabilizing factors."
+        },
+        {
+            "question": "What is esterification?",
+            "options": [
+                "Breaking an ester into its components with water",
+                "The reaction of a carboxylic acid with an alcohol to form an ester and water",
+                "The oxidation of an alcohol to an aldehyde",
+                "The polymerization of alkene monomers"
+            ],
+            "answer": 1,
+            "explanation": "Esterification: carboxylic acid + alcohol ⇌ ester + water. Conditions: concentrated H₂SO₄ catalyst, heat. The reaction is reversible — use excess of one reactant or remove water to improve ester yield."
+        },
+        {
+            "question": "What is the name of the ester formed from ethanol and propanoic acid?",
+            "options": [
+                "Propyl ethanoate",
+                "Ethyl propanoate",
+                "Propyl methanoate",
+                "Ethyl ethanoate"
+            ],
+            "answer": 1,
+            "explanation": "Ester naming: alkyl group (from alcohol) + -anoate (from acid). Ethanol → ethyl. Propanoic acid → propanoate. Combined: ethyl propanoate. Formula: C₂H₅COOC₂H₅."
+        },
+        {
+            "question": "What is saponification?",
+            "options": [
+                "The fermentation of sugars to produce alcohol",
+                "Base hydrolysis of esters — used in soap-making; fats (esters) + NaOH → glycerol + fatty acid salts (soap)",
+                "The dehydration of alcohols to alkenes",
+                "The addition of H₂O to an alkene"
+            ],
+            "answer": 1,
+            "explanation": "Saponification is base (NaOH) hydrolysis of esters: ester + NaOH → carboxylate salt + alcohol. It's irreversible (unlike acid hydrolysis). Soap-making: triglyceride fats + NaOH → glycerol + fatty acid sodium salts (soap)."
+        },
+        {
+            "question": "What functional group do amines contain, and are they acidic or basic?",
+            "options": [
+                "–COOH — acidic",
+                "–NH₂ — basic (lone pair on N accepts protons)",
+                "–OH — neutral",
+                "–COO– — acidic"
+            ],
+            "answer": 1,
+            "explanation": "Amines contain –NH₂. The nitrogen has a lone pair that accepts protons (H⁺), making amines basic. CH₃NH₂ + H₂O ⇌ CH₃NH₃⁺ + OH⁻. They are related to ammonia (NH₃) — one or more H replaced by carbon groups."
+        },
+        {
+            "question": "What is the IUPAC name for CH₃CH₂CH₂OH?",
+            "options": ["Propan-2-ol", "Propan-1-ol", "Butanol", "Ethanol"],
+            "answer": 1,
+            "explanation": "3-carbon chain = prop-. Functional group –OH = -ol. OH is on carbon 1 (number from the end nearest the OH): propan-1-ol. If OH were on carbon 2: propan-2-ol."
+        },
+        {
+            "question": "What is a homologous series?",
+            "options": [
+                "A series of compounds with the same molecular formula",
+                "A family of compounds with the same functional group and general formula, each differing by CH₂",
+                "A series of reactions leading from one compound to another",
+                "A group of structural isomers"
+            ],
+            "answer": 1,
+            "explanation": "A homologous series is a family sharing the same functional group and general formula, consecutive members differing by –CH₂–. Members have similar chemical properties but gradually changing physical properties (BP increases with chain length)."
+        },
+        {
+            "question": "Why do branched alkanes have lower boiling points than straight-chain isomers?",
+            "options": [
+                "Branched alkanes have weaker covalent bonds",
+                "Branched shapes are more compact with less surface area contact between molecules, giving weaker London dispersion forces",
+                "Branched alkanes have lower molar masses",
+                "Branching introduces polar bonds"
+            ],
+            "answer": 1,
+            "explanation": "London (van der Waals) dispersion forces depend on surface area contact between molecules. Branched alkanes are more compact — less surface contact between molecules means weaker intermolecular forces and lower boiling points."
+        },
+        {
+            "question": "What reagent and colour change distinguishes an aldehyde from a ketone?",
+            "options": [
+                "Bromine water — decolorizes with aldehyde only",
+                "Tollens' reagent (Ag⁺ solution) — silver mirror forms with aldehyde, no reaction with ketone",
+                "Litmus — red with aldehyde, blue with ketone",
+                "Acidified K₂Cr₂O₇ — orange with both"
+            ],
+            "answer": 1,
+            "explanation": "Tollens' reagent: aldehyde reduces Ag⁺ → Ag (silver mirror on test tube). Ketone — no reaction. Also Fehling's solution: aldehyde reduces Cu²⁺ (blue) → Cu₂O (brick red precipitate). Ketones can't be further oxidized, so they don't react."
+        },
+        {
+            "question": "What is the product when ethene reacts with HBr?",
+            "options": [
+                "Bromoethene (vinyl bromide)",
+                "Bromoethane (C₂H₅Br)",
+                "1,2-dibromoethane",
+                "Ethanol"
+            ],
+            "answer": 1,
+            "explanation": "HBr adds across the C=C double bond: CH₂=CH₂ + HBr → CH₃CH₂Br (bromoethane). This is hydrohalogenation — H adds to one carbon, Br to the other. The double bond is broken and two new single bonds form."
+        },
+        {
+            "question": "What are positional isomers? Give an example.",
+            "options": [
+                "Compounds with the same functional group but different chain lengths",
+                "Compounds with the same molecular formula and functional group but in different positions on the chain",
+                "Compounds that are mirror images of each other",
+                "Compounds with different molecular formulas but similar properties"
+            ],
+            "answer": 1,
+            "explanation": "Positional isomers have the same formula and functional group but at different positions. Example: propan-1-ol (–OH on C1) vs propan-2-ol (–OH on C2), both C₃H₇OH. They have different boiling points and reactivity (2-ol can't be oxidized to a carboxylic acid)."
+        },
+        {
+            "question": "In fermentation, what is the maximum alcohol concentration that can be achieved?",
+            "options": ["5%", "10%", "15%", "95%"],
+            "answer": 2,
+            "explanation": "Yeast is killed by ethanol concentrations above ~15%. This limits fermentation to ~15% maximum alcohol. Industrial distillation is needed to concentrate further (e.g. spirits at 40%). The Haber-like compromise: enzyme activity vs product inhibition."
+        }
     ]
 }
